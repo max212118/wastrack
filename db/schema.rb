@@ -10,10 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_28_153457) do
+ActiveRecord::Schema.define(version: 2022_03_01_104131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "city_halls", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "containers", force: :cascade do |t|
+    t.integer "temperature"
+    t.integer "filling_level"
+    t.string "location"
+    t.boolean "broken"
+    t.bigint "city_hall_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["city_hall_id"], name: "index_containers_on_city_hall_id"
+  end
+
+  create_table "road_containers", force: :cascade do |t|
+    t.boolean "collected"
+    t.bigint "container_id", null: false
+    t.bigint "road_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["container_id"], name: "index_road_containers_on_container_id"
+    t.index ["road_id"], name: "index_road_containers_on_road_id"
+  end
+
+  create_table "roads", force: :cascade do |t|
+    t.datetime "date"
+    t.integer "kilometers"
+    t.bigint "user_id", null: false
+    t.bigint "truck_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["truck_id"], name: "index_roads_on_truck_id"
+    t.index ["user_id"], name: "index_roads_on_user_id"
+  end
+
+  create_table "trucks", force: :cascade do |t|
+    t.integer "kilometers"
+    t.float "consumption"
+    t.string "plate_number"
+    t.bigint "city_hall_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["city_hall_id"], name: "index_trucks_on_city_hall_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +74,10 @@ ActiveRecord::Schema.define(version: 2022_02_28_153457) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "containers", "city_halls"
+  add_foreign_key "road_containers", "containers"
+  add_foreign_key "road_containers", "roads"
+  add_foreign_key "roads", "trucks"
+  add_foreign_key "roads", "users"
+  add_foreign_key "trucks", "city_halls"
 end
