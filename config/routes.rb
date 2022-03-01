@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
+  get :dashboard, to: 'pages#dashboard'
+  resources :roads, only: [:update, :show]
+  resources :road_containers, only: [:update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
