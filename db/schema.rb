@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2022_03_01_153946) do
-=======
 ActiveRecord::Schema.define(version: 2022_03_01_155858) do
->>>>>>> a99e9340ac246ac200f94e7e72d1a5f4ad01fb15
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,21 +86,14 @@ ActiveRecord::Schema.define(version: 2022_03_01_155858) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-<<<<<<< HEAD
-    t.string "type"
-=======
     t.string "employee_category"
->>>>>>> a99e9340ac246ac200f94e7e72d1a5f4ad01fb15
     t.string "first_name"
     t.string "last_name"
     t.string "phone_number"
     t.bigint "city_hall_id"
     t.string "employee_id"
     t.boolean "admin"
-<<<<<<< HEAD
     t.string "nickname"
-=======
->>>>>>> a99e9340ac246ac200f94e7e72d1a5f4ad01fb15
     t.index ["city_hall_id"], name: "index_users_on_city_hall_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
