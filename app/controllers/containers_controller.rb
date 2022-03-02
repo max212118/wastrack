@@ -7,4 +7,5 @@ class ContainersController < ApplicationController
     @container = Container.new
       authorize @container
     end
+
 end
