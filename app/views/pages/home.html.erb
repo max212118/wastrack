@@ -1,4 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
 <%= link_to "dashboard", dashboard_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "wastetruck.jpg" %>');">
+  <div class="container">
+    <h1>Wastrack</h1>
+    <p>Economisez du temps et de l'argent en adoptant notre solution.</p>
+  </div>
+</div>
+<div id="homecard">
+  <h2>Notre solution.</h2>
+  <div id="iconeshome">
+      <i id="captorshome" class="fas fa-satellite-dish"></i>
+        <p>Des capteurs placés dans des poubelles qui permettent d'évaluer son taux de remplissage.</p>
+      <i id="maphome" class="fas fa-map"></i>
+        <p>Une carte qui permet aux conducteurs d'optimiser leur trajet afin d'économiser du temps, de l'argent et de sauver la planète.</p>
+      <i id="computerhome" class="fas fa-desktop"></i>
+        <p>Un qite pour les mairies qui permet de voir différentes infos.</p>
+  </div>
+</div>
