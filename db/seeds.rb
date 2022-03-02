@@ -61,4 +61,6 @@ road_container8 = RoadContainer.create!(container_id: container14.id, collected:
 road_container9 = RoadContainer.create!(container_id: container15.id, collected: false, road: road1)
 road_container10 = RoadContainer.create!(container_id: container16.id, collected: false, road: road1)
 
+truck1 = Truck.create!(kilometers: 165, consumption: 1, plate_number: "FD-803-XY", city_hall_id: city_hall_megeve.id)
+
 puts "Seeding done."
