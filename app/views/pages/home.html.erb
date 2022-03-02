@@ -1,18 +1,45 @@
-<%= link_to "dashboard", dashboard_path %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "wastetruck.jpg" %>');">
-  <div class="container">
-    <h1>Wastrack</h1>
-    <p>Economisez du temps et de l'argent en adoptant notre solution.</p>
+
+<div id="carouselExampleFade banner-home" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active"  >
+      <div class="empty" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("stats.jpg") %>');"></div>
+    </div>
+    <div class="carousel-item"  >
+       <div class="empty" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("collector.jpg") %>');"></div>
+    </div>
+    <div class="carousel-item"  >
+      <div class="empty" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("wastetruck.jpg") %>');"></div>
+    </div>
   </div>
 </div>
+
 <div id="homecard">
-  <h2>Notre solution.</h2>
+  <h2 id="hometitle">Nos solutions.</h2>
   <div id="iconeshome">
-      <i id="captorshome" class="fas fa-satellite-dish"></i>
-        <p>Des capteurs placés dans des poubelles qui permettent d'évaluer son taux de remplissage.</p>
-      <i id="maphome" class="fas fa-map"></i>
-        <p>Une carte qui permet aux conducteurs d'optimiser leur trajet afin d'économiser du temps, de l'argent et de sauver la planète.</p>
-      <i id="computerhome" class="fas fa-desktop"></i>
-        <p>Un site pour les mairies qui permet de voir différentes infos.</p>
+    <div id="captorshome">
+      <i class="fas fa-satellite-dish"></i>
+      <p class="texthome">Des capteurs placés dans des <br>poubelles qui permettent <br>d'évaluer son taux de remplissage.</p>
+    </div>
+    <div id="maphome" >
+      <i class="fas fa-map"></i>
+      <p class="texthome">Une carte qui permet aux <br>conducteurs d'optimiser <br>leur trajet afin d'économiser du temps, <br>de l'argent et de <br>sauver la planète.</p>
+    </div>
+    <div id="computerhome" >
+      <i class="fas fa-desktop"></i>
+        <p class="texthome">Un site pour les mairies qui permet <br>de voir différentes infos.</p>
+      </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
   </div>
 </div>
