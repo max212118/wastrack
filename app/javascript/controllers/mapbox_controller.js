@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
-import * as turf from '@turf/turf'
+// import * as turf from '@turf/turf'
 
 export default class extends Controller {
   static values = {
