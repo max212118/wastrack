@@ -24,6 +24,7 @@ user5 = User.create!(first_name: 'Phillipine', last_name: 'Doligez', email:'phil
 user6 = User.create!(first_name: 'Francois', last_name: 'Robino', email:'francois.robino@gmail.com', password: '123456',employee_id: 'GHJKL',employee_category: 'collector', admin: false, city_hall_id: city_hall_megeve.id, phone_number: '0664929928')
 user7 = User.create!(first_name: 'Romain', last_name: 'Tarnaud', email:'romain.tarnaud@gmail.com', password: '123456',employee_id: 'WXCVB',employee_category: 'collector', admin: false, city_hall_id: city_hall_megeve.id, phone_number: '0664929929')
 user8 = User.create!(first_name: 'Louis', last_name: 'Quemard', email:'louis.quemard@gmail.com', password: '123456',employee_id: 'JKLMD',employee_category: 'collector', admin: false, city_hall_id: city_hall_megeve.id, phone_number: '0664929430')
+user9 = User.create!(first_name: 'Boris', last_name: 'Paillard', email:'boris@lewagon.org', password: '123456',employee_id: 'JKLMD',employee_category: 'collector', admin: true, city_hall_id: city_hall_megeve.id, phone_number: '0664929430')
 
 truck1 = Truck.create!(kilometers: 25000, consumption: 35, city_hall_id: city_hall_megeve.id, plate_number: 'AZER1234')
 truck2 = Truck.create!(kilometers: 50000, consumption: 32, city_hall_id: city_hall_megeve.id, plate_number: 'YUIO5678')
