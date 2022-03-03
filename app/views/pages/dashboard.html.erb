@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="card-category">
-      <%= column_chart ContainerFillingLevel.group_by_day(:at).average(:level), defer: true, height: "400px" %>
+      <%= column_chart ContainerFillingLevel.group_by_week(:at).average(:level), defer: true, height: "400px" %>
     </div>
     
     <div class="card-category" style="width: 70%; height: 400px;">

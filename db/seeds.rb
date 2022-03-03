@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create!(name: 'Luke', movie: movies.first)
+require "open-uri"
+
 puts "Seeding..."
 
 RoadContainer.destroy_all
@@ -14,7 +16,7 @@ User.destroy_all
 Truck.destroy_all
 CityHall.destroy_all
 
-city_hall1 = CityHall.create!(name: "Megeve")
+city_hall_megeve = CityHall.create!(name: "Megeve")
 
 user1 = User.create!(first_name: 'Maxence', last_name: 'Tarnaud', email:'maxence.trnd@gmail.com', password: '123456', admin: true, phone_number: '0664929923')
 user2 = User.create!(first_name: 'Krystof', last_name: 'Novak', email:'krystof.novak@gmail.com', password: '123456', admin: true, phone_number: '0664929924')
@@ -93,5 +95,59 @@ road_container7 = RoadContainer.create!(container_id: container12.id, collected:
 road_container8 = RoadContainer.create!(container_id: container14.id, collected: false, road: road1)
 road_container9 = RoadContainer.create!(container_id: container15.id, collected: false, road: road1)
 road_container10 = RoadContainer.create!(container_id: container16.id, collected: false, road: road1)
+
+file = URI.open('https://avatars.githubusercontent.com/u/96442481?v=4')
+user1.photo.attach(io: file, filename: 'maxence.png', content_type: 'image/jpg')
+
+file = URI.open('https://avatars.githubusercontent.com/u/67561419?v=4')
+user2.photo.attach(io: file, filename: 'arnaud.png', content_type: 'image/jpg')
+
+file = URI.open('https://avatars.githubusercontent.com/u/97159673?v=4')
+user3.photo.attach(io: file, filename: 'eli.png', content_type: 'image/jpg')
+
+file = URI.open('https://avatars.githubusercontent.com/u/95491777?v=4')
+user4.photo.attach(io: file, filename: 'amaury.png', content_type: 'image/jpg')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# user5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# user6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# user7.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# user8.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# user9.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+
+# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 
 puts "Seeding done."
