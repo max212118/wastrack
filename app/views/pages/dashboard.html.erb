@@ -1,44 +1,19 @@
 <div>
-  <ul>
-    <% @containers.each do |container| %>
-      <li><%= container.temperature %></li>
-      <li><%= container.filling_level %></li>
-      <li><%= container.location %></li>
-      <li><%= container.broken %></li>
-      <li><%= container.city_hall %></li>
-    <% end %>
-  </ul>
-</div>
 
-
-<div>
-  <ul>
-    <% @roads.each do |road| %>
-      <li><%= road.date %></li>
-      <li><%= road.kilometers %></li>
-      <li><%= road.truck %></li>
-    <% end %>
-  </ul>
-</div>
-
-
-<div>
-  <ul>
-    <% @road_containers.each do |road_container| %>
-      <li><%= road_container.container %></li>
-      <li><%= road_container.road %></li>
-    <% end %>
-  </ul>
-</div>
-
-
-<div>
   <ul>
     <% @trucks.each do |truck| %>
-      <li><%= truck.kilometers %></li>
-      <li><%= truck.consumption %></li>
-      <li><%= truck.plate_number %></li>
-     <li><%= truck.city_hall %></li>
+      <li><%= link_to truck.plate_number, truck_path(truck) %></li>
     <% end %>
   </ul>
 </div>
+
+<%# list the trucks  %>
+<%# link_to a un truck %>
+
+<%# trucks.road.km %>
+
+
+<%# filling rate moyen en fonction des jours %>
+<%# map with full screen button%>
+<%# savings per day %>
+<%# trucks index with show truck %>
