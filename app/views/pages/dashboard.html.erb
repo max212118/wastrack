@@ -8,9 +8,10 @@
           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
     </div>
-    <div class="card-category" style="width: 70%; height: 400px;">
+    <div class="card-category">
+      <%= column_chart ContainerFillingLevel.group_by_day(:at).average(:level), defer: true, height: "400px" %>
     </div>
-
+    
     <div class="card-category" style="width: 70%; height: 400px;">
       <div>
         <ul>
@@ -23,7 +24,7 @@
         </ul>
       </div>
     </div>
-
+    
     <div  id="savings-card" class="card-category" style="width: 70%; height: 400px;">
       <div id="savings-card-all">
         <h1 id="savings-card-title" >Economies</h1>
@@ -32,24 +33,9 @@
           <h5> • Km :</h5>
           <h5> • Argent :</h5>
           <h5> • Temps :</h5>
-      </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-    <div class="card-category" style="width: 70%; height: 400px;">
-
-<%# list the trucks  %>
-<%# link_to a un truck %>
-    </div>
-  </div>
-</div>
-
-<%# trucks.road.km %>
-
-
-<%# filling rate moyen en fonction des jours %>
-<%# map with full screen button%>
-<%# savings per day %>
-<%# trucks index with show truck %>

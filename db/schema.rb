@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_03_112005) do
+
+ActiveRecord::Schema.define(version: 2022_03_03_134738) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +55,15 @@ ActiveRecord::Schema.define(version: 2022_03_03_112005) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+  end
+
+  create_table "container_filling_levels", force: :cascade do |t|
+    t.bigint "container_id", null: false
+    t.integer "level"
+    t.datetime "at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["container_id"], name: "index_container_filling_levels_on_container_id"
   end
 
   create_table "containers", force: :cascade do |t|
@@ -132,6 +143,7 @@ ActiveRecord::Schema.define(version: 2022_03_03_112005) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "container_filling_levels", "containers"
   add_foreign_key "containers", "city_halls"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
