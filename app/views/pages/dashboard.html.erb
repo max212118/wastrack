@@ -9,11 +9,28 @@
   </ul>
 </div>
 
+<div class="container-dashboard">
+  <div class="cards">
+    <div class="card-category">
+      <div style="width: 100%; height: 400px;"
+          data-controller="mapbox"
+          data-mapbox-markers-value="<%= @markers.to_json %>"
+          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+    <div class="card-category" style="width: 70%; height: 400px;">
 
+    </div>
 
+    <div class="card-category" style="width: 70%; height: 400px;">
+    </div>
+    <div class="card-category" style="width: 70%; height: 400px;">
 
 <%# list the trucks  %>
 <%# link_to a un truck %>
+    </div>
+  </div>
+</div>
 
 <%# trucks.road.km %>
 
@@ -22,3 +39,4 @@
 <%# map with full screen button%>
 <%# savings per day %>
 <%# trucks index with show truck %>
+

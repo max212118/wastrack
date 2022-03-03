@@ -78,5 +78,4 @@ road_container8 = RoadContainer.create!(container_id: container14.id, collected:
 road_container9 = RoadContainer.create!(container_id: container15.id, collected: false, road: road1)
 road_container10 = RoadContainer.create!(container_id: container16.id, collected: false, road: road1)
 
-
 puts "Seeding done."
