@@ -1,10 +1,4 @@
 
-
-<%= link_to dashboard_path do %>
-  <i class="fas fa-user"></i>
-<% end %>
-
-
 <div id="carouselExampleFade banner-home" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active"  >
@@ -22,9 +16,13 @@
 <div id="homecard">
   <h2 id="hometitle">Nos solutions.</h2>
   <div id="iconeshome">
-    <div id="captorshome">
-      <i class="fas fa-satellite-dish"></i>
-      <p class="texthome">Des capteurs placés dans des <br>poubelles qui permettent <br>d'évaluer son taux de remplissage.</p>
+    <div class="home-cards-component">
+      <div id="captorshome">
+          <i class="fas fa-satellite-dish compo-before"></i>
+          <h1 class="title-card-home compo-before">Des capteurs</h1>
+          <p class="texthome compo-after">Des capteurs placés dans des <br>poubelles qui permettent <br>d'évaluer son taux de remplissage.</p>
+      </div>
+      <div class="home-card-dash"></div>
     </div>
     <div id="maphome" >
       <i class="fas fa-map"></i>
@@ -46,6 +44,6 @@
     <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    Conditions Générales  •  Confidentialité  •  Contact
   </div>
 </div>

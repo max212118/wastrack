@@ -7,7 +7,7 @@ ruby '3.0.3'
 gem "geocoder"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'turf-rails'
-
+gem 'cloudinary', '~> 1.16.0'
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.6'
 # Use postgresql as the database for Active Record
@@ -68,3 +68,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'dotenv-rails', groups: [:development, :test]
