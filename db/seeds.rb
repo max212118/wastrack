@@ -108,46 +108,67 @@ user3.photo.attach(io: file, filename: 'eli.png', content_type: 'image/jpg')
 file = URI.open('https://avatars.githubusercontent.com/u/95491777?v=4')
 user4.photo.attach(io: file, filename: 'amaury.png', content_type: 'image/jpg')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# user5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+user5.photo.attach(io: file, filename: 'container.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# user6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+user6.photo.attach(io: file, filename: 'container.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# user7.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+user7.photo.attach(io: file, filename: 'container.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# user8.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+user8.photo.attach(io: file, filename: 'container.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# user9.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+user9.photo.attach(io: file, filename: 'container.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://cdn.radiofrance.fr/s3/cruiser-production/2018/08/43ab56da-2891-4915-8553-1e3ce9634714/860_img_5002_0.jpg')
+container1.photo.attach(io: file, filename: 'container1.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://cdn.radiofrance.fr/s3/cruiser-production/2018/08/43ab56da-2891-4915-8553-1e3ce9634714/860_img_5002_0.jpg')
+container2.photo.attach(io: file, filename: 'container2.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://img.archiexpo.fr/images_ae/photo-g/149561-9415923.jpg')
+container3.photo.attach(io: file, filename: 'container3.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://www.hellopro.fr/images/produit-2/8/0/1/conteneur-semi-enterre-pehd-monobloc-6614108.jpg')
+container4.photo.attach(io: file, filename: 'container4.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://cdn-s-www.ledauphine.com/images/35FFE94F-1882-4852-8475-B30948115C87/NW_raw/des-containers-semi-enterres-de-ce-type-seront-bientot-installes-a-pussiez-et-chemin-du-bon-photo-le-dl-raymond-brassoud-1595427866.jpg')
+container5.photo.attach(io: file, filename: 'container5.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://www.bugeysud-trimax.fr/wp-content/uploads/2017/09/CSE-Burbanche-e1504536972712.jpg')
+container6.photo.attach(io: file, filename: 'container6.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://www.techni-contact.com/ressources/images/produits/zoom/conteneur-rond-semi-enterre-a-50-cm-16650542-3.jpg')
+container7.photo.attach(io: file, filename: 'container7.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://5nlhp384fz-flywheel.netdna-ssl.com/wp-content/uploads/conteneurs_enterres.png')
+container8.photo.attach(io: file, filename: 'container8.png', content_type: 'image/png')
 
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-# container1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+container9.photo.attach(io: file, filename: 'container9.png', content_type: 'image/png')
+
+file = URI.open('https://www.mesopinions.com/public/img/petition/petition-img-16623-fr.jpeg')
+container10.photo.attach(io: file, filename: 'container10.png', content_type: 'image/png')
+
+file = URI.open('https://cdn.radiofrance.fr/s3/cruiser-production/2018/08/43ab56da-2891-4915-8553-1e3ce9634714/860_img_5002_0.jpg')
+container11.photo.attach(io: file, filename: 'container11.png', content_type: 'image/png')
+
+file = URI.open('https://img.archiexpo.fr/images_ae/photo-g/149561-9415923.jpg')
+container12.photo.attach(io: file, filename: 'container12.png', content_type: 'image/png')
+
+file = URI.open('https://www.hellopro.fr/images/produit-2/8/0/1/conteneur-semi-enterre-pehd-monobloc-6614108.jpg')
+container13.photo.attach(io: file, filename: 'container13.png', content_type: 'image/png')
+
+file = URI.open('https://cdn-s-www.ledauphine.com/images/35FFE94F-1882-4852-8475-B30948115C87/NW_raw/des-containers-semi-enterres-de-ce-type-seront-bientot-installes-a-pussiez-et-chemin-du-bon-photo-le-dl-raymond-brassoud-1595427866.jpg')
+container14.photo.attach(io: file, filename: 'container14.png', content_type: 'image/png')
+
+file = URI.open('https://www.bugeysud-trimax.fr/wp-content/uploads/2017/09/CSE-Burbanche-e1504536972712.jpg')
+container15.photo.attach(io: file, filename: 'container15.png', content_type: 'image/png')
+
+file = URI.open('https://www.techni-contact.com/ressources/images/produits/zoom/conteneur-rond-semi-enterre-a-50-cm-16650542-3.jpg')
+container16.photo.attach(io: file, filename: 'container16.png', content_type: 'image/png')
 
 puts "Seeding done."
