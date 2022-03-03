@@ -43,7 +43,14 @@
   position: absolute;
   margin-left: -350px;
   padding: 20px;
-  border: 2px solid black;
+}
+
+.card--border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .texthome {
@@ -96,24 +103,7 @@
   opacity: 1;
 }
 
-.home-cards-component:hover {
-    transform: translate(-30px, -30px);
-    .compo-before {
-      display: none;
-    }
-    .compo-after {
-      display: block;
-    }
-}
-
-.compo-before {
-  display: block;
-}
-
-.compo-after {
-  display: none;
-}
-
 .container-dashboard {
   margin: 40px 50px;
 }
+
