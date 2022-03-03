@@ -76,5 +76,4 @@ export default class extends Controller {
 }
 // 6.6362048, 45.8719517
 
-}
 
