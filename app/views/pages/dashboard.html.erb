@@ -1,3 +1,14 @@
+<div>
+  <ul>
+    <%count = 1%>
+    <% @trucks.each do |truck| %>
+      <li><%= link_to truck.plate_number, truck_path(truck) %></li>
+    <%= "team #{count}" %>
+    <% count += 1 %>
+    <% end %>
+  </ul>
+</div>
+
 <div class="container-dashboard">
   <div class="cards">
     <div class="card-category">
@@ -12,8 +23,8 @@
     </div>
 
     <div class="card-category" style="width: 70%; height: 400px;">
-
     </div>
+
     <div  id="savings-card" class="card-category" style="width: 70%; height: 400px;">
       <div id="savings-card-all">
         <h1 id="savings-card-title" >Economies</h1>
@@ -27,3 +38,20 @@
     </div>
   </div>
 </div>
+
+    <div class="card-category" style="width: 70%; height: 400px;">
+
+<%# list the trucks  %>
+<%# link_to a un truck %>
+    </div>
+  </div>
+</div>
+
+<%# trucks.road.km %>
+
+
+<%# filling rate moyen en fonction des jours %>
+<%# map with full screen button%>
+<%# savings per day %>
+<%# trucks index with show truck %>
+
