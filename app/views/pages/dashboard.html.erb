@@ -1,44 +1,23 @@
-<div>
-  <ul>
-    <% @containers.each do |container| %>
-      <li><%= container.temperature %></li>
-      <li><%= container.filling_level %></li>
-      <li><%= container.location %></li>
-      <li><%= container.broken %></li>
-      <li><%= container.city_hall %></li>
-    <% end %>
-  </ul>
+<div class="container-dashboard">
+  <div class="cards">
+    <div class="card-category">
+      <div style="width: 100%; height: 400px;"
+          data-controller="mapbox"
+          data-mapbox-markers-value="<%= @markers.to_json %>"
+          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+    <div class="card-category" style="width: 70%; height: 400px;">
+
+    </div>
+
+    <div class="card-category" style="width: 70%; height: 400px;">
+
+    </div>
+    <div class="card-category" style="width: 70%; height: 400px;">
+
+    </div>
+  </div>
 </div>
 
 
-<div>
-  <ul>
-    <% @roads.each do |road| %>
-      <li><%= road.date %></li>
-      <li><%= road.kilometers %></li>
-      <li><%= road.truck %></li>
-    <% end %>
-  </ul>
-</div>
-
-
-<div>
-  <ul>
-    <% @road_containers.each do |road_container| %>
-      <li><%= road_container.container %></li>
-      <li><%= road_container.road %></li>
-    <% end %>
-  </ul>
-</div>
-
-
-<div>
-  <ul>
-    <% @trucks.each do |truck| %>
-      <li><%= truck.kilometers %></li>
-      <li><%= truck.consumption %></li>
-      <li><%= truck.plate_number %></li>
-     <li><%= truck.city_hall %></li>
-    <% end %>
-  </ul>
-</div>
