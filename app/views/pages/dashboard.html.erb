@@ -1,42 +1,8 @@
-<div>
-  <ul>
-    <%count = 1%>
-    <% @trucks.each do |truck| %>
-      <li><%= link_to truck.plate_number, truck_path(truck) %></li>
-    <%= "team #{count}" %>
-    <% count += 1 %>
-    <% end %>
-  </ul>
-</div>
-
-<div class="container-dashboard">
-  <div class="cards">
-    <div class="card-category">
-      <div style="width: 100%; height: 400px;"
-          data-controller="mapbox"
-          data-mapbox-markers-value="<%= @markers.to_json %>"
-          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-    </div>
-    <div class="card-category" style="width: 70%; height: 400px;">
-
-    </div>
-
-    <div class="card-category" style="width: 70%; height: 400px;">
-    </div>
-    <div class="card-category" style="width: 70%; height: 400px;">
-
-<%# list the trucks  %>
-<%# link_to a un truck %>
+<% @trucks.each_with_index do |truck, index| %>
+  <div class="card-product">
+    <div class="card-product-info d-flex justify-content-between w-100">
+      <%= link_to truck.plate_number, truck_path(truck) %>
+      <p><%= "team #{index + 1}" %></p>
     </div>
   </div>
-</div>
-
-<%# trucks.road.km %>
-
-
-<%# filling rate moyen en fonction des jours %>
-<%# map with full screen button%>
-<%# savings per day %>
-<%# trucks index with show truck %>
-
+<% end %>
