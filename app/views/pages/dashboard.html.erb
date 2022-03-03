@@ -1,11 +1,16 @@
 <div>
-
   <ul>
+    <%count = 1%>
     <% @trucks.each do |truck| %>
       <li><%= link_to truck.plate_number, truck_path(truck) %></li>
+    <%= "team #{count}" %>
+    <% count += 1 %>
     <% end %>
   </ul>
 </div>
+
+
+
 
 <%# list the trucks  %>
 <%# link_to a un truck %>
