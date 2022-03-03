@@ -1,8 +1,36 @@
-<% @trucks.each_with_index do |truck, index| %>
-  <div class="card-product">
-    <div class="card-product-info d-flex justify-content-between w-100">
-      <%= link_to truck.plate_number, truck_path(truck) %>
-      <p><%= "team #{index + 1}" %></p>
+
+<div class="container-dashboard">
+  <div class="cards">
+    <div class="card-category">
+      <div style="width: 100%; height: 400px;"
+          data-controller="mapbox"
+          data-mapbox-markers-value="<%= @markers.to_json %>"
+          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+    <div class="card-category">
+      <%= column_chart ContainerFillingLevel.group_by_day(:at).average(:level), defer: true, height: "400px" %>
+    </div>
+
+      <% @trucks.each_with_index do |truck, index| %>
+      <div class="card-product">
+       <div class="card-product-info d-flex justify-content-between w-100">
+          <%= link_to truck.plate_number, truck_path(truck) %>
+          <p><%= "team #{index + 1}" %></p>
+        </div>
+      </div>
+      <% end %>
+
+    <div  id="savings-card" class="card-category" style="width: 70%; height: 400px;">
+      <div id="savings-card-all">
+        <h1 id="savings-card-title" >Economies</h1>
+        <div id="savings-card-text">
+          <h5> • Co2 :</h5>
+          <h5> • Km :</h5>
+          <h5> • Argent :</h5>
+          <h5> • Temps :</h5>
+        </div>
+      </div>
     </div>
   </div>
-<% end %>
+</div>
