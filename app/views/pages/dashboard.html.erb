@@ -15,9 +15,9 @@
     <div id="graphdiv">
       <div class="card-category">
         <div class="button-container d-flex justify-content-around">
-          <div class="btn btn-success" id="day">Days</div>
-          <div class="btn btn-success" id="week">Weeks</div>
-          <div class="btn btn-success" id="month">Months</div>
+          <div class="btn btn-success" id="day">Jour</div>
+          <div class="btn btn-success" id="week">Semaine</div>
+          <div class="btn btn-success" id="month">Mois</div>
         </div>
         <div class="active" id="day-chart" data-hello_controller-target="chart"><%= column_chart ContainerFillingLevel.group_by_day(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%></div>
         <div class="d-none" id="week-chart" data-hello_controller-target="chart"><%= column_chart ContainerFillingLevel.group_by_week(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%></div>
