@@ -146,7 +146,7 @@ container7.photo.attach(io: file, filename: 'container7.png', content_type: 'ima
 file = URI.open('https://5nlhp384fz-flywheel.netdna-ssl.com/wp-content/uploads/conteneurs_enterres.png')
 container8.photo.attach(io: file, filename: 'container8.png', content_type: 'image/png')
 
-file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+file = URI.open('https://www.hellopro.fr/images/produit-2/8/0/1/conteneur-semi-enterre-pehd-monobloc-6614108.jpg')
 container9.photo.attach(io: file, filename: 'container9.png', content_type: 'image/png')
 
 file = URI.open('https://www.mesopinions.com/public/img/petition/petition-img-16623-fr.jpeg')

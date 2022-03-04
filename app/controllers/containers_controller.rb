@@ -8,4 +8,9 @@ class ContainersController < ApplicationController
       authorize @container
     end
 
+  def show
+    @container = Container.find(params[:id])
+    authorize @container
+  end
+
 end

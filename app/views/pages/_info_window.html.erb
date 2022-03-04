@@ -2,4 +2,7 @@
 <p>taux de remplissage:<%= container.filling_level %> %</p>
 <div class="container-photo">
   <%= cl_image_tag container.photo.key, size: "150"%>
+  <div class="infos-container">
+  <%=link_to "En savoir plus", container_path(container) %>
+  </div>
 </div>

@@ -8,7 +8,7 @@ class RoadPolicy < ApplicationPolicy
   end
 
   def show?
-    return true if user.present? && user.employee_category == "collector"
+    return true if user.present?
   end
 
   def update?

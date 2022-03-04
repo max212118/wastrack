@@ -10,4 +10,9 @@ class ContainerPolicy < ApplicationPolicy
   def new?
     true
   end
+
+  def show?
+    return true if user.present?
+  end
+
 end

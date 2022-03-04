@@ -1,0 +1,13 @@
+<div class="card-container">
+  <div class="button-container d-flex justify-content-around">
+    <div class="stats-container">
+        <p><%=@container.location %></p>
+        <p><%=@container.filling_level %></p>
+        <p><%=@container.temperature %></p>
+    </div>
+    <div class="photo-container">
+        <%= cl_image_tag @container.photo.key, size: "500"%>
+    </div>
+  </div>
+  <%= column_chart @container.container_filling_levels.group_by_day(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%>
+</div>
