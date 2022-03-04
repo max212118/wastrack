@@ -31,7 +31,7 @@ user9 = User.create!(first_name: 'Boris', last_name: 'Paillard', email:'boris@le
 truck1 = Truck.create!(kilometers: 25000, consumption: 35, city_hall_id: city_hall_megeve.id, plate_number: 'AZER1234')
 truck2 = Truck.create!(kilometers: 50000, consumption: 32, city_hall_id: city_hall_megeve.id, plate_number: 'YUIO5678')
 truck3 = Truck.create!(kilometers: 12000, consumption: 28, city_hall_id: city_hall_megeve.id, plate_number: 'HJKK694')
-truck4 = Truck.create!(kilometers: 5000, consumption: 25, city_hall_id: city_hall_megeve.id, plate_number: 'YHBG5679')
+truck4 = Truck.create!(kilometers: 5000, consumption: 25, city_hall_id: city_hall_megeve.id, plate_number: 'YHBG567')
 
 road1 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.today)
 
@@ -169,5 +169,17 @@ container15.photo.attach(io: file, filename: 'container15.png', content_type: 'i
 
 file = URI.open('https://www.techni-contact.com/ressources/images/produits/zoom/conteneur-rond-semi-enterre-a-50-cm-16650542-3.jpg')
 container16.photo.attach(io: file, filename: 'container16.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1635691315495-ff39debe5764?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1626&q=80')
+truck1.photo.attach(io: file, filename: 'truck1.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1561069157-218187260215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1944&q=80')
+truck2.photo.attach(io: file, filename: 'truck2.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1521406189446-6224875954d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
+truck3.photo.attach(io: file, filename: 'truck3.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1565653997625-abd844efd40f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
+truck4.photo.attach(io: file, filename: 'truck4.png', content_type: 'image/png')
 
 puts "Seeding done."

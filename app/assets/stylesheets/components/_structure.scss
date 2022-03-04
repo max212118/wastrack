@@ -120,3 +120,17 @@
 #savings-card-text {
   margin-left: 40px;
 }
+
+.d-flex-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 246px;
+  margin: 62px;
+  margin-top: 30px;
+}
+
+.rapport {
+  padding: 20px;
+  border: 1px solid lightgreen;
+}
