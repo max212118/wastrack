@@ -32,7 +32,6 @@ truck1 = Truck.create!(kilometers: 25000, consumption: 35, city_hall_id: city_ha
 truck2 = Truck.create!(kilometers: 50000, consumption: 32, city_hall_id: city_hall_megeve.id, plate_number: 'YUIO5678')
 truck3 = Truck.create!(kilometers: 12000, consumption: 28, city_hall_id: city_hall_megeve.id, plate_number: 'HJKK694')
 truck4 = Truck.create!(kilometers: 5000, consumption: 25, city_hall_id: city_hall_megeve.id, plate_number: 'YHBG5679')
-truck5 = Truck.create!(kilometers: 165, consumption: 1, city_hall_id: city_hall_megeve.id, plate_number: 'FD803XY')
 
 road1 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.today)
 
