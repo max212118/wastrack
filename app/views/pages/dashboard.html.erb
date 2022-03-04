@@ -1,0 +1,101 @@
+
+
+<div class="container-dashboard">
+  <div class="cards">
+
+    <div id="mapdiv">
+      <div class="card-category">
+        <div style="width: 100%; height: 400px;"
+            data-controller="mapbox"
+            data-mapbox-markers-value="<%= @markers.to_json %>"
+            data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    </div>
+
+    
+    <div id="graphdiv">
+      <div class="card-category">
+        <div class="button-container d-flex justify-content-around">
+          <div class="btn btn-success" id="day">Days</div>
+          <div class="btn btn-success" id="week">Weeks</div>
+          <div class="btn btn-success" id="month">Months</div>
+        </div>
+        <div class="active" id="day-chart" data-hello_controller-target="chart"><%= column_chart ContainerFillingLevel.group_by_day(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%></div>
+        <div class="d-none" id="week-chart" data-hello_controller-target="chart"><%= column_chart ContainerFillingLevel.group_by_week(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%></div>
+        <div class="d-none" id="month-chart" data-hello_controller-target="chart"><%= column_chart ContainerFillingLevel.group_by_month(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%></div>
+      </div>
+    </div>
+
+    <div id="truckdiv">
+      <div class="card-category" style="width: 100%; height: 400px;">
+        <%# <h1 class="card-title">Flotte</h1> %>
+        <div class= "container-plates">
+          <ul>
+            <%count = 1%>
+            <% @trucks.each do |truck| %>
+              <div class="container-plate-driver d-flex justify-content-between">
+                <div class="container-plate">
+                  <li><span class="registration-ui"><%=link_to truck.plate_number, truck_path(truck) %></span>
+                </div>
+                <div class="plate-driver">
+                  <p><%= "team #{count}" %></p></li>
+                </div>
+              </div>
+              <% count += 1 %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="savingsdiv">
+      <div id="savings-card" class="card-category" style="width: 100%; height: 400px;">
+        <h1 class="card-title">Rapport</h1>
+        <div id="savings-card-all">
+          <div id="savings-card-text">
+            <h5> • Co2 :</h5>
+            <h5> • Km :</h5>
+            <h5> • Argent :</h5>
+            <h5> • Temps :</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+var select_format = () => {
+  day = document.getElementById("day");
+  week = document.getElementById("week");
+  month = document.getElementById("month");
+  
+  day.addEventListener("click", (event) => {
+     document.getElementById("day-chart").classList.add("active");
+     document.getElementById("day-chart").classList.remove("d-none");
+     document.getElementById("week-chart").classList.add("d-none");
+     document.getElementById("month-chart").classList.add("d-none");
+
+  });
+
+  week.addEventListener("click", (event) => {
+    document.getElementById("week-chart").classList.add("active");
+    document.getElementById("week-chart").classList.remove("d-none");
+    document.getElementById("day-chart").classList.add("d-none");
+    document.getElementById("month-chart").classList.add("d-none");
+  });
+
+  month.addEventListener("click", (event) => {
+     document.getElementById("month-chart").classList.add("active");
+     document.getElementById("month-chart").classList.remove("d-none");
+       document.getElementById("week-chart").classList.add("d-none");
+     document.getElementById("day-chart").classList.add("d-none");
+  });
+}
+
+select_format();
+</script>
+
+

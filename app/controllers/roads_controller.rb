@@ -9,7 +9,9 @@ class RoadsController < ApplicationController
     @markers = @containers.geocoded.map do |container|
      {
        lat: container.latitude,
-       lng: container.longitude
+       lng: container.longitude,
+       info_window: render_to_string(partial: "info_window", locals: { container: container }),
+       image_url: helpers.asset_url("garbage.png")
      }
     # map
     end

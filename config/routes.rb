@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   resource :dashboard, only: [] do
     get :container_graph, to: 'dashboard#container_graph'
   end
-
-  resources :containers, only: [:update, :show]
-  resources :roads, only: [:update, :show]
-  resources :road_containers, only: [:update, :show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.htm
+
+    resources :containers, only: [:update, :show]
+    resources :roads, only: [:update, :show]
+    resources :road_containers, only: [:update, :show]
+    resources :trucks, only: [:show]
 end

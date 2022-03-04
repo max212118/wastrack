@@ -12,5 +12,15 @@ class PagesController < ApplicationController
     @trucks = Truck.all
     @roads = Road.all
     @road_containers = RoadContainer.all
+
+    @markers = @containers.geocoded.map do |container|
+     {
+       lat: container.latitude,
+       lng: container.longitude,
+       info_window: render_to_string(partial: "info_window", locals: { container: container }),
+       image_url: helpers.asset_url(container.map_icon)
+     }
+
+    end
   end
 end
