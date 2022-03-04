@@ -11,5 +11,6 @@ let  = new Chart(graph, {
       label: "Filling Level of Containers",
       data: [80, 90, 70, 40, 40, 50, 60, 70, 40, 30, 40, 80],
     }]
+
   }
 })
