@@ -33,7 +33,19 @@ truck2 = Truck.create!(kilometers: 50000, consumption: 32, city_hall_id: city_ha
 truck3 = Truck.create!(kilometers: 12000, consumption: 28, city_hall_id: city_hall_megeve.id, plate_number: 'HJKK694')
 truck4 = Truck.create!(kilometers: 5000, consumption: 25, city_hall_id: city_hall_megeve.id, plate_number: 'YHBG567')
 
-road1 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.today)
+road1= Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.today, kilometers: 20)
+road2= Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.today, kilometers: 20)
+road1_2018 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2018), kilometers: 60)
+road1_2019 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2019), kilometers: 70)
+road1_2020 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2020), kilometers: 60)
+road1_2021 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2021), kilometers: 80)
+road1_2017 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2017), kilometers: 60)
+road2_2018 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2018), kilometers: 80)
+road2_2019 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2019), kilometers: 60)
+road2_2020 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2020), kilometers: 60)
+road2_2021 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2021), kilometers: 90)
+road2_2017 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2017), kilometers: 60)
+
 
 container1 = Container.create!(temperature: 18, filling_level: 20, location: '747 Rte de Prariand, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
 
@@ -84,16 +96,21 @@ container16 = Container.create!(temperature: 12, filling_level: 100, location: '
 
 SeedContainerFillingLevels.new(Container.last).call
 
-road_container1 = RoadContainer.create!(container_id: container3.id, collected: false, road: road1)
-road_container2 = RoadContainer.create!(container_id: container4.id, collected: false, road: road1)
-road_container3 = RoadContainer.create!(container_id: container5.id, collected: false, road: road1)
-road_container4 = RoadContainer.create!(container_id: container8.id, collected: false, road: road1)
-road_container5 = RoadContainer.create!(container_id: container9.id, collected: false, road: road1)
-road_container6 = RoadContainer.create!(container_id: container11.id, collected: false, road: road1)
-road_container7 = RoadContainer.create!(container_id: container12.id, collected: false, road: road1)
-road_container8 = RoadContainer.create!(container_id: container14.id, collected: false, road: road1)
-road_container9 = RoadContainer.create!(container_id: container15.id, collected: false, road: road1)
-road_container10 = RoadContainer.create!(container_id: container16.id, collected: false, road: road1)
+Road.all.each do |r|
+    road_container1 = RoadContainer.create!(container_id: container3.id, collected: false, road: r)
+    road_container2 = RoadContainer.create!(container_id: container4.id, collected: false, road: r)
+    road_container3 = RoadContainer.create!(container_id: container5.id, collected: false, road: r)
+    road_container4 = RoadContainer.create!(container_id: container8.id, collected: false, road: r)
+    road_container5 = RoadContainer.create!(container_id: container9.id, collected: false, road: r)
+    road_container6 = RoadContainer.create!(container_id: container11.id, collected: false, road: r)
+    road_container7 = RoadContainer.create!(container_id: container12.id, collected: false, road: r)
+    road_container8 = RoadContainer.create!(container_id: container14.id, collected: false, road: r)
+    road_container9 = RoadContainer.create!(container_id: container15.id, collected: false, road: r)
+    road_container10 = RoadContainer.create!(container_id: container16.id, collected: false, road: r)
+end
+
+
+
 
 file = URI.open('https://avatars.githubusercontent.com/u/96442481?v=4')
 user1.photo.attach(io: file, filename: 'maxence.png', content_type: 'image/jpg')
