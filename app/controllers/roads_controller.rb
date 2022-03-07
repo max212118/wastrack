@@ -1,5 +1,8 @@
 class RoadsController < ApplicationController
   
+	def index
+		
+	end
   
   def show
     @road = Road.find(params[:id])

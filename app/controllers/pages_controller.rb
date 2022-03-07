@@ -7,6 +7,10 @@ class PagesController < ApplicationController
     # landing page
   end
 
+  def economies
+	  
+  end
+
   def dashboard
     @containers = Container.all
     @trucks = Truck.all
