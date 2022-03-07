@@ -1,0 +1,85 @@
+.card-truck {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 60px;
+}
+
+.card-truck img {
+ height: 100%;
+ width: 170;
+ object-fit: cover;
+}
+
+.card-truck h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.card-truck p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.card-truck .card-truck-infos {
+  margin-left: 50px;
+  padding: 30px;
+  text-align: center;
+  border: solid 5px #BEDEBC;
+}
+
+.btn-add-truck{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+  padding: 30px;
+  background:#BEDEBC;
+  text-align: center;
+  color: black;
+  height: 40px;
+  width: 200px;
+  text-decoration:none;
+  border-radius: 5px;
+  border: solid black;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.116), 0 17px 50px 0 rgba(0,0,0,0.119);
+  overflow: hidden;
+  position: relative;
+  &:hover{
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.btn-add-truck:after{
+  background:black;
+  height: 40px;
+  width: 200px;
+  border: 0;
+  color: #BEDEBC;
+  border: 1px solid #BEDEBC;
+  text-align: center;
+  content: 'Truck incoming...';
+  display: block;
+  position: absolute;
+  top: -110%;
+  left: -1px;
+  line-height: 40px;
+  transition: all 0.5s ease-in-out;
+}
+.btn-add-truck:hover:after{
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}

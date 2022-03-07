@@ -1,1 +1,14 @@
-Index Trucks
+
+<%@trucks.each do |truck| %>
+<div class="card-truck">
+  <%=image_tag asset_path("garbage-truck") %>
+  <div class="card-truck-infos">
+    <h2>Truck : <strong><%=truck.plate_number%></strong></h2>
+    <h2> Mairie : <strong><%=truck.city_hall.name%></strong></h2>
+    <p><strong> Kilometers : </strong><%= truck.kilometers %></p>
+  </div>
+</div>
+<%end%>
+<div class= "d-flex justify-content-center">
+  <%= link_to "Add a Truck", '#trucks', class: 'btn-add-truck' %>
+</div>
