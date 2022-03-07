@@ -3,9 +3,9 @@
 <div class="container-dashboard">
   <div class="cards">
 
-    <div id="mapdiv">
-      <div class="card-category">
-        <div style="width: 100%; height: 400px;"
+    <div class="card-category">
+      <div id="mapdiv">
+        <div style="width: 100%; height: 438px;"
             data-controller="mapbox"
             data-mapbox-markers-value="<%= @markers.to_json %>"
             data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    
+
     <div id="graphdiv">
       <div class="card-category">
         <div class="button-container d-flex justify-content-around">
@@ -71,7 +71,7 @@ var select_format = () => {
   day = document.getElementById("day");
   week = document.getElementById("week");
   month = document.getElementById("month");
-  
+
   day.addEventListener("click", (event) => {
      document.getElementById("day-chart").classList.add("active");
      document.getElementById("day-chart").classList.remove("d-none");
@@ -97,5 +97,3 @@ var select_format = () => {
 
 select_format();
 </script>
-
-
