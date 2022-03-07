@@ -3,7 +3,7 @@
 
     <div id="mapdiv">
       <div class="card-category">
-        <div style="width: 100%; height: 400px;"
+        <div style="width: 100%; height: 450px;"
             data-controller="mapbox"
             data-mapbox-markers-value="<%= @markers.to_json %>"
             data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -65,50 +65,9 @@
       </div>
     </div>
 
-    <div id="savingsdiv">
-      <div id="savings-card" class="card-category" style="width: 100%; height: 400px;">
-        <h1 class="card-title">Rapport</h1>
-        <%# <div id="savings-card-all"> %>
-          <%# <div id="savings-card-text"> %>
-            <%# <h5> • Co2 :</h5>
-        <div id="savings-card-all">
-          <div id="savings-card-text">
-            <h5> • Co2 :</h5>
-            <h5> • Km :</h5>
-            <h5> • Argent :</h5>
-            <h5> • Temps :</h5> %>
-            <div class="d-flex-all">
-              <div class="d-flex" style="justify-content: space-between;">
-                <div class="co2 rapport">
-                  <h4>CO2:</h4>
-                  <div>
-                      15000 kg
-                  </div>
-                </div>
-                <div class="km rapport">
-                  <h4>KM:</h4>
-                  <div>
-                      4500 km
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex" style="justify-content: space-between;">
-                <div class="Argent rapport">
-                  <h4>Argent</h4>
-                  <div>
-                      7000 €
-                  </div>
-                </div>
-                <div class="temps rapport">
-                  <h4>Temps:</h4>
-                  <div>
-                      120 h
-                  </div>
-                </div>
-              </div>
-            </div>
-          <%# </div> %>
-        <%# </div> %>
+    <div id="container-savings">
+      <div class="card-category">
+        <div><%= area_chart Road.group_by_year(:date).average(:kilometers), defer: true, height: "400px", colors: ["#85C883"], xtitle: "Temps", ytitle: "Km par tournée"%></div>
       </div>
     </div>
   </div>
