@@ -1,0 +1,15 @@
+<div class="card-container">
+    <div class="card-product">
+        <%= cl_image_tag @container.photo.key, size: "500"%>
+        <div class="card-product-infos">
+            <h2><%=@container.location %></h2>
+            <p>Taux de remplissage <strong><%=@container.filling_level %> %</strong></p>
+            <p>Temperature du conteneur <strong><%=@container.temperature %> °C</strong></p>
+        </div>
+    </div>
+    <div>
+      <%= column_chart @container.container_filling_levels.group_by_day(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%>
+    </div>
+</div>
+
+

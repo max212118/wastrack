@@ -31,9 +31,21 @@ user9 = User.create!(first_name: 'Boris', last_name: 'Paillard', email:'boris@le
 truck1 = Truck.create!(kilometers: 25000, consumption: 35, city_hall_id: city_hall_megeve.id, plate_number: 'AZER1234')
 truck2 = Truck.create!(kilometers: 50000, consumption: 32, city_hall_id: city_hall_megeve.id, plate_number: 'YUIO5678')
 truck3 = Truck.create!(kilometers: 12000, consumption: 28, city_hall_id: city_hall_megeve.id, plate_number: 'HJKK694')
-truck4 = Truck.create!(kilometers: 5000, consumption: 25, city_hall_id: city_hall_megeve.id, plate_number: 'YHBG5679')
+truck4 = Truck.create!(kilometers: 5000, consumption: 25, city_hall_id: city_hall_megeve.id, plate_number: 'YHBG567')
 
-road1 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.today)
+road1= Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.today, kilometers: 20)
+road2= Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.today, kilometers: 20)
+road1_2018 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2018), kilometers: 60)
+road1_2019 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2019), kilometers: 70)
+road1_2020 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2020), kilometers: 60)
+road1_2021 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2021), kilometers: 80)
+road1_2017 = Road.create!(user_id: user3.id, truck_id: truck1.id, date: Date.new(2017), kilometers: 60)
+road2_2018 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2018), kilometers: 80)
+road2_2019 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2019), kilometers: 60)
+road2_2020 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2020), kilometers: 60)
+road2_2021 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2021), kilometers: 90)
+road2_2017 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2017), kilometers: 60)
+
 
 container1 = Container.create!(temperature: 18, filling_level: 20, location: '747 Rte de Prariand, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
 
@@ -84,16 +96,21 @@ container16 = Container.create!(temperature: 12, filling_level: 100, location: '
 
 SeedContainerFillingLevels.new(Container.last).call
 
-road_container1 = RoadContainer.create!(container_id: container3.id, collected: false, road: road1)
-road_container2 = RoadContainer.create!(container_id: container4.id, collected: false, road: road1)
-road_container3 = RoadContainer.create!(container_id: container5.id, collected: false, road: road1)
-road_container4 = RoadContainer.create!(container_id: container8.id, collected: false, road: road1)
-road_container5 = RoadContainer.create!(container_id: container9.id, collected: false, road: road1)
-road_container6 = RoadContainer.create!(container_id: container11.id, collected: false, road: road1)
-road_container7 = RoadContainer.create!(container_id: container12.id, collected: false, road: road1)
-road_container8 = RoadContainer.create!(container_id: container14.id, collected: false, road: road1)
-road_container9 = RoadContainer.create!(container_id: container15.id, collected: false, road: road1)
-road_container10 = RoadContainer.create!(container_id: container16.id, collected: false, road: road1)
+Road.all.each do |r|
+    road_container1 = RoadContainer.create!(container_id: container3.id, collected: false, road: r)
+    road_container2 = RoadContainer.create!(container_id: container4.id, collected: false, road: r)
+    road_container3 = RoadContainer.create!(container_id: container5.id, collected: false, road: r)
+    road_container4 = RoadContainer.create!(container_id: container8.id, collected: false, road: r)
+    road_container5 = RoadContainer.create!(container_id: container9.id, collected: false, road: r)
+    road_container6 = RoadContainer.create!(container_id: container11.id, collected: false, road: r)
+    road_container7 = RoadContainer.create!(container_id: container12.id, collected: false, road: r)
+    road_container8 = RoadContainer.create!(container_id: container14.id, collected: false, road: r)
+    road_container9 = RoadContainer.create!(container_id: container15.id, collected: false, road: r)
+    road_container10 = RoadContainer.create!(container_id: container16.id, collected: false, road: r)
+end
+
+
+
 
 file = URI.open('https://avatars.githubusercontent.com/u/96442481?v=4')
 user1.photo.attach(io: file, filename: 'maxence.png', content_type: 'image/jpg')
@@ -146,7 +163,7 @@ container7.photo.attach(io: file, filename: 'container7.png', content_type: 'ima
 file = URI.open('https://5nlhp384fz-flywheel.netdna-ssl.com/wp-content/uploads/conteneurs_enterres.png')
 container8.photo.attach(io: file, filename: 'container8.png', content_type: 'image/png')
 
-file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
+file = URI.open('https://www.hellopro.fr/images/produit-2/8/0/1/conteneur-semi-enterre-pehd-monobloc-6614108.jpg')
 container9.photo.attach(io: file, filename: 'container9.png', content_type: 'image/png')
 
 file = URI.open('https://www.mesopinions.com/public/img/petition/petition-img-16623-fr.jpeg')
@@ -169,5 +186,17 @@ container15.photo.attach(io: file, filename: 'container15.png', content_type: 'i
 
 file = URI.open('https://www.techni-contact.com/ressources/images/produits/zoom/conteneur-rond-semi-enterre-a-50-cm-16650542-3.jpg')
 container16.photo.attach(io: file, filename: 'container16.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1635691315495-ff39debe5764?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1626&q=80')
+truck1.photo.attach(io: file, filename: 'truck1.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1561069157-218187260215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1944&q=80')
+truck2.photo.attach(io: file, filename: 'truck2.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1521406189446-6224875954d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
+truck3.photo.attach(io: file, filename: 'truck3.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1565653997625-abd844efd40f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
+truck4.photo.attach(io: file, filename: 'truck4.png', content_type: 'image/png')
 
 puts "Seeding done."
