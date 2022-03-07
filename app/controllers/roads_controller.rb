@@ -1,9 +1,8 @@
 class RoadsController < ApplicationController
-  
 	def index
-		
+    @roads = policy_scope(Road)
 	end
-  
+
   def show
     @road = Road.find(params[:id])
     authorize @road

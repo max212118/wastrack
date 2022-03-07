@@ -1,36 +1,59 @@
 <div class="sidebar">
-  <div>
-    <a href="#" class="nav_logo">
-      <i class='bx bx-layer nav_logo-icon'></i>
-      <span class="nav_logo-name">Wastetrack</span>
-    </a>
-    <div class="nav_list">
-      <a href="#" class="nav_link active">
-        <i class='bx bx-grid-alt nav_icon'></i>
-        <span class="nav_name">Conteneurs</span>
-      </a> <a href="#" class="nav_link">
-        <i class='bx bx-user nav_icon'></i>
-        <span class="nav_name">Camions</span>
-      </a>
-      <a href="#" class="nav_link">
-        <i class='bx bx-message-square-detail nav_icon'></i>
-        <span class="nav_name">Routes</span>
-      </a>
-      <a href="#" class="nav_link">
-        <i class='bx bx-bookmark nav_icon'></i>
-        <span class="nav_name">Économies</span>
-      </a>
-      <a href="#" class="nav_link">
-       <i class='bx bx-folder nav_icon'></i>
-       <span class="nav_name">Chatroom</span>
-      </a>
-      <a href="#" class="nav_link">
-        <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
-        <span class="nav_name">Problème</span>
-      </a>
+  <div style="display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+              height: 100%;">
+    <div>
+      <%= link_to root_path, class: "nav-logo" do %>
+        <i class='bx bx-layer nav_logo-icon'></i>
+        <span class="nav_logo-name">Wastetrack</span>
+      <% end %>
+
+      <ul class="nav-list">
+        <li>
+          <%= link_to dashboard_path, class: "nav-link" do %>
+            Dashboard <i class='bx bx-bookmark nav_icon'></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to containers_path, class: "nav-link"  do %>
+            Conteneurs <i class='bx bx-bookmark nav_icon'></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to trucks_path, class: "nav-link"  do%>
+            Camions <i class='bx bx-bookmark nav_icon'></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to roads_path, class: "nav-link" do%>
+            Routes <i class='bx bx-user nav_icon'></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to economies_path, class: "nav-link" do%>
+            Économies <i class='bx bx-user nav_icon'></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to chatrooms_path, class: "nav-link" do %>
+            Chatroom <i class='bx bx-user nav_icon'> </i>
+          <% end %>
+        </li>
+      </ul>
     </div>
-    <div class="header_img">
-      <img src="https://i.imgur.com/hczKIze.jpg" alt="">
+
+    <div class="">
+      <li class="navbar-nav">
+        <% if user_signed_in? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </li>
     </div>
   </div>
 </div>
