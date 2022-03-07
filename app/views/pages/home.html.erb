@@ -1,48 +1,85 @@
-
-<div id="carouselExampleFade banner-home" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active"  >
-      <div class="empty" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("stats.jpg") %>');"></div>
-    </div>
-    <div class="carousel-item"  >
-       <div class="empty" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("collector.jpg") %>');"></div>
-    </div>
-    <div class="carousel-item"  >
-      <div class="empty" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("wastetruck.jpg") %>');"></div>
-    </div>
-  </div>
-</div>
-
-<div id="homecard">
-  <h2 id="hometitle">Nos solutions.</h2>
-  <div id="iconeshome">
-    <div class="home-cards-component">
-      <div id="captorshome">
-          <i class="fas fa-satellite-dish compo-before"></i>
-          <p class="texthome compo-after">Des capteurs placés dans des <br>poubelles qui permettent <br>d'évaluer son taux de remplissage.</p>
+<div id="landing-page">
+  <div id="carouselExampleFade banner-home" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active"  >
+        <div class="empty d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("trash.jpg") %>');">
+          <div class="container">
+            <h1 class="big-title-landing">WASTRACK</h1>
+            <h2 class="carrousel-text">Découvrez nos solutions</h2>
+            <%= link_to "Voir nos solutions", '#homecard', class: 'btn btn-success carroussel-btn' %>
+          </div>
+        </div>
       </div>
-      <div class="home-card-dash"></div>
-    </div>
-    <div id="maphome" >
-      <i class="fas fa-map"></i>
-      <p class="texthome">Une carte qui permet aux <br>conducteurs d'optimiser <br>leur trajet afin d'économiser du temps, <br>de l'argent et de <br>sauver la planète.</p>
-    </div>
-    <div id="computerhome" >
-      <i class="fas fa-desktop"></i>
-        <p class="texthome">Un site pour les mairies qui permet <br>de voir différentes infos.</p>
+      <div class="carousel-item"  >
+        <div class="empty d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("collector.jpg") %>');">
+          <div class="container">
+            <h1 class="big-title-landing">WASTRACK</h1>
+            <h2 class="carrousel-text">Découvrez nos solutions</h2>
+            <%= link_to "Voir nos solutions", '#homecard', class: 'btn btn-success carroussel-btn' %>
+          </div>
+        </div>
       </div>
+      <div class="carousel-item"  >
+        <div class="empty d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("wastetruck.jpg") %>');">
+          <div class="container">
+            <h1 class="big-title-landing">WASTRACK</h1>
+            <h2 class="carrousel-text">Découvrez nos solutions</h2>
+            <%= link_to "Voir nos solutions", '#homecard', class: 'btn btn-success carroussel-btn' %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+  <div id="mobile-landing">
+    <h2 id="title-mobile-landing">Une application mobile pour les collecteurs</h2>
+    <div class="d-flex">
+      <div id="card-iphone-collector-1">
+        <%= image_tag asset_path('iphone-collector-1.png'), id: "iphone-collector-1" %>
+          <p id="text-iphone-collector-1">Commencez votre journée facilement</p>
+      </div>
+      <div id="card-iphone-collector-3">
+        <%= image_tag asset_path('iphone-collector-2.png'), id: "iphone-collector-2" %>
+          <p id="text-iphone-collector-2">Suivez la route optimisé par l'application</p>
+      </div>
+      <div id="card-iphone-collector-3">
+        <%= image_tag asset_path('iphone-collector-3.png'), id: "iphone-collector-3" %>
+          <p id="text-iphone-collector-3">Signalez tout problèmes lors de votre collecte</p>
+      </div>
+    </div>
   </div>
-  <div class="footer-copyright">
-    Conditions Générales  •  Confidentialité  •  Contact
+
+  <div id="homecard">
+    <h2 id="hometitle">Nos solutions.</h2>
+    <div id="iconeshome">
+      <div class="home-cards-component">
+        <div id="captorshome">
+            <i class="fas fa-satellite-dish compo-before"></i>
+            <p class="texthome compo-after">Des capteurs placés dans des <br>poubelles qui permettent <br>d'évaluer son taux de remplissage.</p>
+        </div>
+        <div class="home-card-dash"></div>
+      </div>
+      <div id="maphome" >
+        <i class="fas fa-map"></i>
+        <p class="texthome">Une carte qui permet aux <br>conducteurs d'optimiser <br>leur trajet afin d'économiser du temps, <br>de l'argent et de <br>sauver la planète.</p>
+      </div>
+      <div id="computerhome" >
+        <i class="fas fa-desktop"></i>
+          <p class="texthome">Un site pour les mairies qui permet <br>de voir différentes infos.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Conditions Générales  •  Confidentialité  •  Contact
+    </div>
   </div>
 </div>
