@@ -12,9 +12,10 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+	@city_hall = CityHall.first
     @containers = Container.all
     @trucks = Truck.all
-    @roads = Road.all
+    @roads = @trucks.map(&:roads).flatten
     @road_containers = RoadContainer.all
 
     @markers = @containers.geocoded.map do |container|
@@ -26,5 +27,10 @@ class PagesController < ApplicationController
      }
 
     end
+	count = @containers.count
+	sum = @roads.map(&:kilometers).sum
+	@dist_moyenne = sum/count
+
+	raise
   end
 end
