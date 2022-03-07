@@ -20,17 +20,28 @@
 			<section class="statis mt-4 text-center">
 				<div class="info-top-d-flex">
 					<div class="info-comp">
+					<% if @containers_red_count < 2 %>
+						<div class="box bg-success p-3">
+					<% elsif @containers_red_count < 4 %>
 						<div class="box bg-warning p-3">
+					<% else %>
+						<div class="box bg-danger p-3">
+					<% end %>
 							<i class="fa-solid fa-trash"></i>
-							<h3>3</h3>
+							<h3><%= @containers_red_count %></h3>
 							<p class="lead">Containers pleins depuis 2j+</p>
 						</div>
 					</div>
 					<div class="info-comp">
-						<div class="box bg-success p-3">
-							<%# <i class="fa-solid fa-timer"></i> %>
+						<% if @average_fill > 6 %>
+							<div class="box bg-success p-3">
+						<% elsif @average_fill > 4 %>
+							<div class="box bg-warning p-3">
+						<% else %>
+							<div class="box bg-danger p-3">
+						<% end %>
 							<i class="fa-solid fa-clock"></i>
-								<h3>2j</h3>
+								<h3> <%= @average_fill %> j</h3>
 							<p class="lead">Temps de remplissage</p>
 						</div>
 					</div>
