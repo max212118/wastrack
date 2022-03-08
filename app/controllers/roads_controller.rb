@@ -3,6 +3,21 @@ class RoadsController < ApplicationController
     @roads = policy_scope(Road)
 	end
 
+    
+    @markers = []
+    @roads.each do |road|
+      @containers = road.containers
+      @markers << @containers.geocoded.map do |container|
+        {
+          lat: container.latitude,
+          lng: container.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { container: container }),
+          image_url: helpers.asset_url("garbage.png")
+        }
+      end
+    end
+  end
+  
   def show
     @road = Road.find(params[:id])
     authorize @road
