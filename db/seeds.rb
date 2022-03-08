@@ -62,7 +62,7 @@ SeedContainerFillingLevels.new(Container.last).call
 container5 = Container.create!(temperature: 12, filling_level: 70, location: "1476 Route De Vers Le Nant, 74120 Demi-Quartier, France", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container6 = Container.create!(temperature: 13, filling_level: 40, location: '116 Rte de la Côté 2000, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
+container6 = Container.create!(temperature: 80, filling_level: 40, location: '116 Rte de la Côté 2000, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
 container7 = Container.create!(temperature: 17, filling_level: 30, location: '2017 Rte du Leutaz, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
