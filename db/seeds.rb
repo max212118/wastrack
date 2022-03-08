@@ -96,17 +96,53 @@ container16 = Container.create!(temperature: 12, filling_level: 100, location: '
 
 SeedContainerFillingLevels.new(Container.last).call
 
-Road.all.each do |r|
-    road_container1 = RoadContainer.create!(container_id: container3.id, collected: false, road: r)
-    road_container2 = RoadContainer.create!(container_id: container4.id, collected: false, road: r)
-    road_container3 = RoadContainer.create!(container_id: container5.id, collected: false, road: r)
-    road_container4 = RoadContainer.create!(container_id: container8.id, collected: false, road: r)
-    road_container5 = RoadContainer.create!(container_id: container9.id, collected: false, road: r)
-    road_container6 = RoadContainer.create!(container_id: container11.id, collected: false, road: r)
-    road_container7 = RoadContainer.create!(container_id: container12.id, collected: false, road: r)
-    road_container8 = RoadContainer.create!(container_id: container14.id, collected: false, road: r)
-    road_container9 = RoadContainer.create!(container_id: container15.id, collected: false, road: r)
-    road_container10 = RoadContainer.create!(container_id: container16.id, collected: false, road: r)
+# Road.all.each do |r|
+#     road_container1 = RoadContainer.create!(container_id: container3.id, collected: false, road: r)
+#     road_container2 = RoadContainer.create!(container_id: container4.id, collected: false, road: r)
+#     road_container3 = RoadContainer.create!(container_id: container5.id, collected: false, road: r)
+#     road_container4 = RoadContainer.create!(container_id: container8.id, collected: false, road: r)
+#     road_container5 = RoadContainer.create!(container_id: container9.id, collected: false, road: r)
+#     road_container6 = RoadContainer.create!(container_id: container11.id, collected: false, road: r)
+#     road_container7 = RoadContainer.create!(container_id: container12.id, collected: false, road: r)
+#     road_container8 = RoadContainer.create!(container_id: container14.id, collected: false, road: r)
+#     road_container9 = RoadContainer.create!(container_id: container15.id, collected: false, road: r)
+#     road_container10 = RoadContainer.create!(container_id: container16.id, collected: false, road: r)
+# end
+
+
+old_roads = [road1_2017,road1_2018,road1_2019,road1_2020,road1_2021,road2_2017,road2_2018,road2_2019,road2_2020,road2_2021]
+new_roads = [road1, road2]
+
+old_roads.each do |r|
+    containers = Container.all
+    containers_c = []
+    10.times do 
+        containers_c << containers.sample
+        containers = containers - containers_c
+    end
+    road_container1 = RoadContainer.create!(container_id:containers_c[0].id, collected: false, road: r)
+    road_container2 = RoadContainer.create!(container_id: containers_c[1].id, collected: false, road: r)
+    road_container3 = RoadContainer.create!(container_id: containers_c[2].id, collected: false, road: r)
+    road_container4 = RoadContainer.create!(container_id: containers_c[3].id, collected: false, road: r)
+    road_container5 = RoadContainer.create!(container_id: containers_c[4].id, collected: false, road: r)
+    road_container6 = RoadContainer.create!(container_id: containers_c[5].id, collected: false, road: r)
+    road_container7 = RoadContainer.create!(container_id: containers_c[6].id, collected: false, road: r)
+    road_container8 = RoadContainer.create!(container_id: containers_c[7].id, collected: false, road: r)
+    road_container9 = RoadContainer.create!(container_id: containers_c[8].id, collected: false, road: r)
+    road_container10 = RoadContainer.create!(container_id: containers_c[9].id, collected: false, road: r)
+end
+
+new_roads.each do |r|
+    containers = Container.all
+    containers_c = []
+    4.times do 
+        containers_c << containers.sample
+        containers = containers - containers_c
+    end
+    road_container1 = RoadContainer.create!(container_id:containers_c[0].id, collected: false, road: r)
+    road_container2 = RoadContainer.create!(container_id: containers_c[1].id, collected: false, road: r)
+    road_container3 = RoadContainer.create!(container_id: containers_c[2].id, collected: false, road: r)
+    road_container4 = RoadContainer.create!(container_id: containers_c[3].id, collected: false, road: r)
 end
 
 
