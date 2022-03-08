@@ -7,13 +7,19 @@
         <h2 class="lh-1"> Mairie : <strong><%=truck.city_hall.name%></strong></h2>
         <p class="lh-1"><strong> Kilometers : </strong><%= truck.kilometers %></p>
         <div class="btn-notification-actions btn-position">
-          <a href="#">Edit  <i class="fas fa-pencil-alt"></i></a>
-          <a href="#">Delete  <i class="far fa-trash-alt"></i></a>
+
+          <%= link_to edit_truck_path(truck) do %>
+            Edit  <i class="fas fa-pencil-alt"></i>
+          <% end %>
+
+          <%= link_to truck_path(truck), method: :delete, data: {confirm: "Are you sure?"} do %>
+            Delete  <i class="far fa-trash-alt"></i>
+          <% end %>
         </div>
       </div>
   </div>
   <%end%>
   <div class= "d-flex justify-content-center">
-    <%= link_to "Add a truck", '#trucks', class: 'btn-add-truck' %>
+    <%= link_to "Add a truck", new_truck_path, class: 'btn-add-truck' %>
   </div>
 </ul>

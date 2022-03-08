@@ -1,14 +1,30 @@
 class TruckPolicy < ApplicationPolicy
   class Scope < Scope
-    # NOTE: Be explicit about which records you allow access to!
     def resolve
+      scope.where(city_hall_id: user.city_hall_id)
       scope.all
     end
   end
+
   def show?
     true
   end
+
   def index?
     true
+  end
+
+  def update?
+    #user.employee_category == "city employee"
+    return true if user.present?
+  end
+
+  def destroy?
+    true
+  end
+
+  def new?
+    # user.employee_category == "city employee"
+    return true if user.present?
   end
 end
