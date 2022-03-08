@@ -1,0 +1,20 @@
+<%@trucks.each do |truck| %>
+<div class="card-truck">
+<div class = "container-plate" ></div>
+    <li><span class="registration-ui"><%= truck.plate_number %></span></li>
+    <div class="text-center">
+      <h2 class="lh-1"> Mairie : <strong><%=truck.city_hall.name%></strong></h2>
+      <p class="lh-1"><strong> Kilometers : </strong><%= truck.kilometers %></p>
+      <div class="btn-notification-actions btn-position">
+        <a href="#">Edit  <i class="fas fa-pencil-alt"></i></a>
+        <a href="#">Delete  <i class="far fa-trash-alt"></i></a>
+      </div>
+    </div>
+</div>
+ </div>
+</div>
+<%end%>
+<div class= "d-flex justify-content-center">
+  <%= link_to "Add a truck", '#trucks', class: 'btn-add-truck' %>
+</div>
+

@@ -1,7 +1,7 @@
 class TrucksController < ApplicationController
 
 	def index
-		
+    @trucks = policy_scope(Truck)
 	end
 
 	def show
