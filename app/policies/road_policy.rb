@@ -11,6 +11,10 @@ class RoadPolicy < ApplicationPolicy
     return true if user.present?
   end
 
+  def index?
+    return true if user.present?
+  end
+
   def update?
     true
   end

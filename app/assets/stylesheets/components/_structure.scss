@@ -1,3 +1,7 @@
+#landing-page {
+  background-color: white;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -20,9 +24,7 @@
 }
 
 .empty {
-  height: 100vh;
-
-  /* Center and scale the image nicely */
+  height: 70vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,16 +77,17 @@
 
 #hometitle {
   font-weight: bold;
+  font-size: 50px;
 }
 
 .footer {
-  background: #F4F4F4;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  background: white;
 }
 .footer-links {
   display: flex;
@@ -134,4 +137,65 @@
 .rapport {
   padding: 20px;
   border: 1px solid lightgreen;
+}
+
+#iphone-collector-1 {
+  margin-left: 200px;
+  margin-right: 150px;
+  height: 550px;
+}
+
+#iphone-collector-2 {
+  margin-right: 150px;
+  height: 550px;
+}
+
+#iphone-collector-3 {
+  height: 550px;
+}
+
+#mobile-landing {
+  margin-top: 60px;
+}
+
+#title-mobile-landing {
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+#text-iphone-collector-1 {
+  margin-left: 190px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+#text-iphone-collector-2 {
+  margin-left: -10px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+#text-iphone-collector-3 {
+  margin-left: -30px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.carrousel-text {
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-top: -20px;
+}
+
+.carroussel-btn {
+  background-color: white;
+}
+
+.big-title-landing {
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
 }
