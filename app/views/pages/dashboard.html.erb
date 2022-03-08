@@ -2,7 +2,18 @@
   <div class="cards">
 
     <div id="mapdiv">
-      <div class="card-category" style="width: 100%; height: 100%;">
+      <div class="card-category" style="width: 100%; height: 80%;">
+      	<div class="statistics-menu">
+          <div class= "d-flex" id="rec-effect">
+            <h5>Carte Live</h5>
+            <div id="rec-circle" class= "blink">
+              <i class="fa fa-circle"></i>
+            </div>
+          </div>
+          <div>
+            <button type="button" class="btn btn-warning"><%= localize( Date.today, format: '%d %B') %></button>
+          </div>
+		    </div>
         <div style="width: 100%; height: 100%;"
             data-controller="mapbox"
             data-mapbox-markers-value="<%= @markers.to_json %>"
@@ -12,9 +23,13 @@
     </div>
 
 	<div id="infodiv" class="card-category">
-		<div class="info-title">
-			<h2>INFOS</h2>
-			<h3><%= localize( Date.today, format: '%B') %></h3>
+		<div class="statistics-menu">
+      <div>
+			  <h5>Informations utiles</h5>
+      </div>
+      <div>
+			  <button type="button" class="btn btn-warning"><%= localize( Date.today, format: '%B') %></button>
+      </div>
 		</div>
 		<div class="info-content">
 			<section class="statis mt-4 text-center">
@@ -94,8 +109,17 @@
     </div> %>
 
     <div id="truckdiv">
-      <div class="card-category" style="width: 100%; height: 400px;">
-        <%# <h1 class="card-title">Flotte</h1> %>
+      <div class="card-category" id= "trucks-card">
+        <div class="statistics-menu">
+            <div>
+              <h5>Flotte de véhicules</h5>
+            </div>
+            <div>
+              <%= link_to dashboard_path do %>
+                <button type="button" class="btn btn-warning">Voir plus</button>
+              <% end %>
+            </div>
+        </div>
         <div class= "container-plates">
           <ul>
             <%count = 1%>
@@ -134,8 +158,18 @@
     </div>
 
     <div id="container-savings">
-      <div class="card-category">
-        <div><%= area_chart Road.group_by_year(:date).average(:kilometers), defer: true, height: "400px", colors: ["#85C883"], xtitle: "Temps", ytitle: "Km par tournée"%></div>
+      <div class="card-category" id= "statistics-card">
+        <div class="statistics-menu">
+          <div>
+            <h5>Economies</h5>
+          </div>
+          <div>
+            <%= link_to dashboard_path do %>
+              <button type="button" class="btn btn-warning">Voir plus</button>
+            <% end %>
+          </div>
+        </div>
+        <div><%= area_chart Road.group_by_year(:date).average(:kilometers), defer: true, height: "400px", colors: ["#85C883"], ytitle: "km par an"%></div>
       </div>
     </div>
   </div>

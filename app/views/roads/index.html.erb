@@ -3,12 +3,14 @@
 </div>
 <div class="main-container">
     <div class="container-roads-menu">
-      <div class="roads-title">
-        <h5>Carte des conteneurs</h5>
-      </div>
-      <div class="button-roads">
-        <button type="button" class="btn btn-warning">Retour au Dashboard</button>
-      </div>
+        <div class="roads-title">
+            <h5>Carte des conteneurs</h5>
+        </div>
+        <div class="button-roads">
+            <%= link_to dashboard_path do %>
+            <button type="button" class="btn btn-warning">Retour au Dashboard</button>
+            <% end %>
+        </div>
     </div>
     <% if params["index"] %>
         <div class="container-maps">
