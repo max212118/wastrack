@@ -2,14 +2,6 @@
   <h1>Découvrez l'historique de votre flotte.</h1>
 </div>
 <div class="main-container">
-    <div class="container-roads-menu">
-      <div class="roads-title">
-        <h5>Carte des conteneurs</h5>
-      </div>
-      <div class="button-roads">
-        <button type="button" class="btn btn-warning">Retour au Dashboard</button>
-      </div>
-    </div>
     <% if params["index"] %>
         <div class="container-maps">
             <div style="width: 100%; height: 450px;"
@@ -28,7 +20,7 @@
         </div>
     <% end %>
 
-    <div class="scroll container table-containers">
+    <div class="container">
         
         <%# <form action="#" class="filter">
             <input type="search" name="filtter" id="filtter" />
@@ -60,10 +52,7 @@
                             <td>190</td>
                             <td>
                             <button><i class="fa fa-trash"></i></button>
-                            <%= link_to roads_path(index: index) do %>
-                                <i class="fa fa-map" id="map-icon-road"></i>
-                                
-                            <% end %>
+                            <%= link_to "test", roads_path(index: index) %>
                             </td>
                         </tr>
                 <%end%>
