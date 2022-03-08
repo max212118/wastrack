@@ -17,8 +17,17 @@
   <body>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
+	
+	<%# "common-container" rajoute une margin left pour la sidebar (toute les pages sauf la home) %>
+	<%= render 'shared/sidebar-1' unless url_for == '/' %>
+	<% unless url_for == '/' %>
+		<div class="common-container">
+	<% end %>
+			<%= render 'shared/navbar' %>
+			<%= render 'shared/flashes' %>
+			<%= yield %>
+	<% unless url_for == '/' %>
+		</div>
+	<% end %>
   </body>
 </html>
