@@ -2,31 +2,34 @@
 <h1>Découvrez l'historique de votre flotte.</h1>
 </div>
 <div class="main-container">
-	<div class="container-roads-menu">
-	<div class="roads-title">
-		<h5>Carte des conteneurs</h5>
-	</div>
-	<div class="button-roads">
-		<button type="button" class="btn btn-warning">Retour au Dashboard</button>
-	</div>
-	</div>
-	<% if params["index"] %>
-		<div class="container-maps">
-			<div style="width: 100%; height: 450px;"
-				data-controller="mapbox"
-				data-mapbox-markers-value="<%= @markers[params["index"].to_i].to_json %>"
-				data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-			</div>
-		</div>
-	<% else %>
-		<div class="container-maps">
-			<div style="width: 100%; height: 450px;"
-				data-controller="mapbox"
-				data-mapbox-markers-value="<%= @markers[0].to_json %>"
-				data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-			</div>
-		</div>
-	<% end %>
+    <div class="container-roads-menu">
+        <div class="roads-title">
+            <h5>Carte des conteneurs</h5>
+        </div>
+        <div class="button-roads">
+            <%= link_to dashboard_path do %>
+            <button type="button" class="btn btn-warning">Retour au Dashboard</button>
+            <% end %>
+        </div>
+    </div>
+    <% if params["index"] %>
+        <div class="container-maps">
+            <div style="width: 100%; height: 450px;"
+                data-controller="mapbox"
+                data-mapbox-markers-value="<%= @markers[params["index"].to_i].to_json %>"
+                data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+        </div>
+    <% else %>
+        <div class="container-maps">
+            <div style="width: 100%; height: 450px;"
+                data-controller="mapbox"
+                data-mapbox-markers-value="<%= @markers[0].to_json %>"
+                data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+        </div>
+    <% end %>
+
 
 	<div class="scroll container table-containers">
 		

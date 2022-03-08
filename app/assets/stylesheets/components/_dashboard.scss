@@ -100,10 +100,88 @@
 	border-radius: 50%;
 }
 
+.bg-success {
+	color: #377752;
+}
+
+.bg-warning {
+	color: #A18233;
+}
+
+.bg-danger {
+	color:#712336;
+}
 
 .lead {
 	height: 60px;
 }
 
 
+#infodiv {
+  background-color: white;
+}
 
+.card-category {
+  background-color: white;
+}
+
+.statistics-menu{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 12px;
+	margin: 3%;
+  }
+
+#statistics-card {
+	display: flow-root;
+}
+
+#trucks-card {
+	display: flow-root;
+	height: 100%;
+}
+
+#mapdiv{
+	display: flex;
+}
+
+.fa-circle {
+ font-size: 10px;
+ color: #CF6B68;
+}
+
+#rec-effect{
+  width: 10vh;
+  justify-content: space-between;
+}
+
+// blink
+
+.blink {
+	-webkit-animation: 1s linear infinite condemed_blink_effect; // pour Safari 4.0-8.0
+	animation: 1s linear infinite condemed_blink_effect;
+  }
+  @-webkit-keyframes condemed_blink_effect { // pour Safari 4.0-8.0
+	0% {
+	  visibility: hidden;
+	}
+	50% {
+	  visibility: hidden;
+	}
+	100% {
+	  visibility: visible;
+	}
+  }
+  @keyframes condemed_blink_effect {
+	0% {
+	  visibility: hidden;
+	}
+	50% {
+	  visibility: hidden;
+	}
+	100% {
+	  visibility: visible;
+	}
+  }
+
+//
