@@ -8,9 +8,8 @@
 .table-containers{
   background-color: #1e2a41;
   // height: 80vh;
-  padding:50px 100px;
+  padding: 50px 20px;
   border-radius: 5px;
-  margin-bottom: 2%;
 }
 
 
@@ -177,6 +176,10 @@ table tr th:first-of-type, table tr td:first-of-type {
 
 body {
   background-color: #F0F6F0;
+}
+
+#radius-map-index {
+  border-radius: 5px;
 }
 
 // #263328;
