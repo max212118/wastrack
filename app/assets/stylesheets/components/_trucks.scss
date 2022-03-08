@@ -8,11 +8,15 @@
   justify-content: space-between;
   margin: 30px 60px;
 }
+.card-truck:hover{
+  padding: 0.8rem;
+}
 
 .card-truck img {
  height: 100%;
  width: 170;
  object-fit: cover;
+ padding-left: 10px;
 }
 
 .card-truck h2 {
@@ -48,6 +52,7 @@
   background:#BEDEBC;
   text-align: center;
   color: black;
+  font-weight: bold;
   height: 40px;
   width: 200px;
   text-decoration:none;
