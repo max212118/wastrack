@@ -7,6 +7,7 @@
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', turbolinks: true, defer: true %>
@@ -16,8 +17,11 @@
   <body>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
-    <%= render 'shared/navbar' %>
+    <%#= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class='dashboard-container'>
+      <%= render 'shared/sidemenu' %>
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,7 +1,8 @@
 class RoadsController < ApplicationController
-  
 	def index
     @roads = policy_scope(Road)
+	end
+
     
     @markers = []
     @roads.each do |road|
@@ -17,7 +18,6 @@ class RoadsController < ApplicationController
     end
   end
   
-
   def show
     @road = Road.find(params[:id])
     authorize @road
