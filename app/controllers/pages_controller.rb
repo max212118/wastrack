@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   end
 
   def economies
-	  
+
   end
 
   def dashboard
@@ -45,7 +45,7 @@ class PagesController < ApplicationController
 
 	cfls_by_c = ContainerFillingLevel.all.map {|t| t if t.level == 100}.compact.group_by{|cfl| cfl.container}.map {|m| m.second.reverse.map(&:at)}
 	last_array = []
-	cfls_by_c.each do |on_compte| 
+	cfls_by_c.each do |on_compte|
 		x = on_compte.count
 		la = on_compte.each_slice(2).to_a.map do |pair_of_cfls|
 			unless pair_of_cfls.second == nil
@@ -58,7 +58,9 @@ class PagesController < ApplicationController
 	real_last_array = []
 	last_array.each do |aod|
 		aod.compact!
-		real_last_array << (aod.sum / aod.count)
+    unless aod.empty?
+		  real_last_array << (aod.sum / aod.count)
+    end
 	end
 
 	@average_fill = (real_last_array.sum / real_last_array.count).truncate(1)
