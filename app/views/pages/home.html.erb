@@ -1,73 +1,65 @@
-<div id="landing-page">
-  <div id="carouselExampleFade banner-home" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active"  >
-        <div class="empty d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("trash.jpg") %>');">
-          <div class="container">
-            <h1 class="big-title-landing">WASTRACK</h1>
-            <h2 class="carrousel-text">Découvrez nos solutions</h2>
-            <%= link_to "Voir nos solutions", '#homecard', class: 'btn btn-success carroussel-btn' %>
-          </div>
+<div class="landingpage">
+
+  <div class="first-part-text-landing">
+    <h1 class="first-part-title-landing">Optimisé votre</h1>
+    <h1 class="second-part-title-landing">waste management</h1>
+    <p>Un itinéraire de collecte optimisé en fonction du taux de <br>remplissage des conteneurs de la ville.</p>
+    <%= link_to "Je demande une démo →", "#", class: "btn btn-success btn-landingpage" %>
+    <%= image_tag('Line.png', class: "line-landingpage") %>
+    <%= image_tag('line-travers.png', class: "line-travers-landingpage") %>
+    <%= image_tag('big-rond.png', class: "big-rond-landingpage") %>
+    <%= image_tag('small-rond.png', class: "small-rond-landingpage") %>
+    <%= image_tag('medium-rond.png', class: "medium-rond-landingpage") %>
+    <%= image_tag('iPhone 13 Pro.png', class: "iphone-landingpage") %>
+  </div>
+
+  <div class="second-part-text-landing">
+    <div class="advantages-landing-page-title">
+      <h1 class="first-part-title-landing">Nos avantages</h1>
+      <p>We are self-service data analytics software that lets you create visually <br>appealing data visualizations and insightful dashboards in minutes.</p>
+      <div class="icons-landing-page">
+        <div class="camembert-div-landing">
+          <%= image_tag('camembert.png', class: "first-icon-landing all-icons-landng") %>
+          <h5>Analisé les donnés <br>de votre secteur</h5>
+          <p class="text-icons-landing">Des graphiques simples qui permmettent une lecture facile.</p>
         </div>
-      </div>
-      <div class="carousel-item"  >
-        <div class="empty d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("collector.jpg") %>');">
-          <div class="container">
-            <h1 class="big-title-landing">WASTRACK</h1>
-            <h2 class="carrousel-text">Découvrez nos solutions</h2>
-            <%= link_to "Voir nos solutions", '#homecard', class: 'btn btn-success carroussel-btn' %>
-          </div>
+        <div class="finger-div-landing">
+          <%= image_tag('finger.png', class: "second-icon-landing all-icons-landng") %>
+          <h5>Des outils pensés <br>pour tous</h5>
+          <p class="text-icons-landing">A disposition une application pour les ramasseur et un site pour les mairies</p>
         </div>
-      </div>
-      <div class="carousel-item"  >
-        <div class="empty d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("wastetruck.jpg") %>');">
-          <div class="container">
-            <h1 class="big-title-landing">WASTRACK</h1>
-            <h2 class="carrousel-text">Découvrez nos solutions</h2>
-            <%= link_to "Voir nos solutions", '#homecard', class: 'btn btn-success carroussel-btn' %>
-          </div>
+        <div class="protect-div-landing">
+          <%= image_tag('protect.png', class: "third-icon-landing all-icons-landng") %>
+          <h5>Vos données sont <br>protégées</h5>
+          <p class="text-icons-landing">Grâce à notre politique vos données sont sécurisées.</p>
+        </div>
+        <div class="graph-div-landing">
+          <%= image_tag('graph.png', class: "fourth-icon-landing all-icons-landng") %>
+          <h5>Retrouvé tout d'un <br>simple coup d'oeil</h5>
+          <p class="text-icons-landing">Grâce à un site organisé trouvez toutes les données simplement.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="mobile-landing">
-    <h2 id="title-mobile-landing">Une application mobile pour les collecteurs</h2>
-    <div class="d-flex">
-      <div id="card-iphone-collector-1">
-        <%= image_tag asset_path('iphone-collector-1.png'), id: "iphone-collector-1" %>
-          <p id="text-iphone-collector-1">Commencez votre journée facilement</p>
-      </div>
-      <div id="card-iphone-collector-3">
-        <%= image_tag asset_path('iphone-collector-2.png'), id: "iphone-collector-2" %>
-          <p id="text-iphone-collector-2">Suivez la route optimisé par l'application</p>
-      </div>
-      <div id="card-iphone-collector-3">
-        <%= image_tag asset_path('iphone-collector-3.png'), id: "iphone-collector-3" %>
-          <p id="text-iphone-collector-3">Signalez tout problèmes lors de votre collecte</p>
-      </div>
-    </div>
-  </div>
+  <div class="third-part-text-landing">
+    <h1 class="third-part-title-landing">Une application <br>mobile pour les <br>collecteurs</h1>
+    <ul class="landing-content">
+      <li>
+      <%= image_tag('Line 1.png', class: "landing-line-1") %>
+      <span class="landing-content-third-part"> Commencez votre journée facilement</span>
+      </li>
+      <li>
+      <%= image_tag('Line 1.png', class: "landing-line-2 content-landing-third") %>
+      <span class="landing-content-third-part"> Suivez la route optimisée par l’application</span>
+      </li>
+      <li>
+      <%= image_tag('Line 1.png', class: "landing-line-3") %>
+      <span class="landing-content-third-part content-landing-third"> Signalé tout problème</span>
+      </li>
+    </ul>
 
-  <div id="homecard">
-    <h2 id="hometitle">Nos solutions.</h2>
-    <div id="iconeshome">
-      <div class="home-cards-component">
-        <div id="captorshome">
-            <i class="fas fa-satellite-dish compo-before"></i>
-            <p class="texthome compo-after">Des capteurs placés dans des <br>poubelles qui permettent <br>d'évaluer son taux de remplissage.</p>
-        </div>
-        <div class="home-card-dash"></div>
-      </div>
-      <div id="maphome" >
-        <i class="fas fa-map"></i>
-        <p class="texthome">Une carte qui permet aux <br>conducteurs d'optimiser <br>leur trajet afin d'économiser du temps, <br>de l'argent et de <br>sauver la planète.</p>
-      </div>
-      <div id="computerhome" >
-        <i class="fas fa-desktop"></i>
-          <p class="texthome">Un site pour les mairies qui permet <br>de voir différentes infos.</p>
-        </div>
-    </div>
+    <%= image_tag('3-phone.png', class: "three-phone-landingpage") %>
   </div>
 
   <div class="footer">
