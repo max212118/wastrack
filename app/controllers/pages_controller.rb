@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     @trucks = Truck.all
     @roads = @trucks.map(&:roads).flatten
     @road_containers = RoadContainer.all
-
+	
     @markers = @containers.geocoded.map do |container|
      {
        lat: container.latitude,
@@ -58,7 +58,9 @@ class PagesController < ApplicationController
 	real_last_array = []
 	last_array.each do |aod|
 		aod.compact!
-		real_last_array << (aod.sum / aod.count)
+		unless aod.empty?
+			real_last_array << (aod.sum / aod.count)
+		end
 	end
 
 	@average_fill = (real_last_array.sum / real_last_array.count).truncate(1)

@@ -1,5 +1,5 @@
 <div class="title-roads">
-  <h1>Découvrez l'historique de votre flotte.</h1>
+<h1>Découvrez l'historique de votre flotte.</h1>
 </div>
 <div class="main-container">
     <div class="container-roads-menu">
@@ -30,51 +30,50 @@
         </div>
     <% end %>
 
-    <div class="scroll container table-containers">
-        
-        <%# <form action="#" class="filter">
-            <input type="search" name="filtter" id="filtter" />
-            <button>filtter</button>
-        </form> %>
-        <div class="container-roads">
-            <table>
-                <thead>
-                <tr>
-                    <th>Date de tournée</th>
-                    <th>Conteneurs ramassés</th>
-                    <th>Km parcourus</th>
-                    <th>Economies CO2</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <%@roads.each_with_index do |road, index| %>
-                        <%if road.kilometers < 30 %>
-                        <tr class="prioirty-300">
-                        <%elsif road.kilometers <= 60%>
-                        <tr class="prioirty-200">
-                        <%else%>
-                        <tr class="prioirty-600">
-                        <%end%>
-                            <td><%=road.date%></td>
-                            <td><%=road.road_containers.count%></td>
-                            <td><i class="fa fa-circle"></i><%=road.kilometers%> km</td>
-                            <td>190</td>
-                            <td>
-                            <button><i class="fa fa-trash"></i></button>
-                            <%= link_to roads_path(index: index) do %>
-                                <i class="fa fa-map" id="map-icon-road"></i>
-                                
-                            <% end %>
-                            </td>
-                        </tr>
-                <%end%>
-                </tbody>
-            </table>
-        </div>
-    </div>
+
+	<div class="scroll container table-containers">
+		
+		<%# <form action="#" class="filter">
+			<input type="search" name="filtter" id="filtter" />
+			<button>filtter</button>
+		</form> %>
+		<div class="container-roads">
+			<table>
+				<thead>
+				<tr>
+					<th>Date de tournée</th>
+					<th>Conteneurs ramassés</th>
+					<th>Km parcourus</th>
+					<th>Economies CO2</th>
+					<th></th>
+				</tr>
+				</thead>
+				<tbody>
+				<%@roads.each_with_index do |road, index| %>
+						<%if road.kilometers < 30 %>
+						<tr class="prioirty-300">
+						<%elsif road.kilometers <= 60%>
+						<tr class="prioirty-200">
+						<%else%>
+						<tr class="prioirty-600">
+						<%end%>
+							<td><%=road.date%></td>
+							<td><%=road.road_containers.count%></td>
+							<td><i class="fa fa-circle"></i><%=road.kilometers%> km</td>
+							<td>190</td>
+							<td>
+							<button><i class="fa fa-trash"></i></button>
+							<%= link_to roads_path(index: index) do %>
+								<i class="fa fa-map" id="map-icon-road"></i>
+								
+							<% end %>
+							</td>
+						</tr>
+				<%end%>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
-
-
 
 <script src="js/all.min.js"></script>
