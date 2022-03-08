@@ -1,0 +1,16 @@
+.sidetracks {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	background-color: #263328;
+}
+
+.nav-pills .nav-link.active {
+	background-color: #ffedb7;
+	color: #263328;
+}
+
+.nav-pills .nav-link {
+	color: white;
+}
