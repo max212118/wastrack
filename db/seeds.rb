@@ -110,7 +110,7 @@ SeedContainerFillingLevels.new(Container.last).call
 # end
 
 
-old_roads = [road1_2017,road1_2018,road1_2018,road1_2019,road1_2020,road1_2021,road2_2017,road2_2018,road2_2018,road2_2019,road2_2020,road2_2021]
+old_roads = [road1_2017,road1_2018,road1_2019,road1_2020,road1_2021,road2_2017,road2_2018,road2_2019,road2_2020,road2_2021]
 new_roads = [road1, road2]
 
 old_roads.each do |r|
@@ -141,8 +141,8 @@ new_roads.each do |r|
     end
     road_container1 = RoadContainer.create!(container_id:containers_c[0].id, collected: false, road: r)
     road_container2 = RoadContainer.create!(container_id: containers_c[1].id, collected: false, road: r)
-    road_container2 = RoadContainer.create!(container_id: containers_c[2].id, collected: false, road: r)
-    road_container2 = RoadContainer.create!(container_id: containers_c[3].id, collected: false, road: r)
+    road_container3 = RoadContainer.create!(container_id: containers_c[2].id, collected: false, road: r)
+    road_container4 = RoadContainer.create!(container_id: containers_c[3].id, collected: false, road: r)
 end
 
 
