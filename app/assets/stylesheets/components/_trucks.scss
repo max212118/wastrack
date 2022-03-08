@@ -51,7 +51,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   padding: 30px;
   background:#BEDEBC;
   text-align: center;
@@ -103,7 +104,7 @@
   box-shadow: 1px 1px 1px #ddd;
   position: relative;
   font-family: helvetica, ariel, sans-serif;
-
+  margin-right: 400px;
 
 }
 .registration-ui:before {
@@ -136,6 +137,7 @@
   display: flex;
   transition: ease .3s;
   margin: 7px;
+  border-radius: 7px;
 }
 .btn-notification:hover .btn-notification-actions {
   opacity: 1;
@@ -149,6 +151,7 @@
   background-color: #BEDEBC;
   text-decoration: none;
   color:black ;
+  border-radius: 8px;
 
   &:hover{
     font-size: 14px;
@@ -161,5 +164,5 @@
 }
 
 .btn-position{
-  margin: 7px;
+  margin: 8px;
 }
