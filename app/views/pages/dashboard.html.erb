@@ -1,17 +1,20 @@
 <div class="container-dashboard">
+    <div class="welcome-message">
+      <h1>Bonjour <%=current_user.first_name%>,</h1>
+    </div>
 	<div class="cards">
 
     <div id="mapdiv">
       <div class="card-category p-3" style="width: 100%; height: 100%;">
       	<div class="statistics-menu">
           <div class= "d-flex" id="rec-effect">
-            <h5>Carte live</h5>
+            <h5>Direct</h5>
             <div id="rec-circle" class= "blink">
               <i class="fa fa-circle"></i>
             </div>
           </div>
           <div>
-            <button type="button" class="btn btn-warning"><%= localize( Date.today, format: '%d %B') %></button>
+            <button type="button" class="btn btn-warning"><%= l( Date.today, format: '%d %B') %></button>
           </div>
 		    </div>
         <div style="width: 100%; height: 80%;"
@@ -28,7 +31,7 @@
 				<h5>Informations utiles</h5>
 			</div>
 			<div>
-				<button type="button" class="btn btn-warning"><%= localize( Date.today, format: '%B') %></button>
+				<button type="button" class="btn btn-warning"><%= l( Date.today, format: '%B') %></button>
 			</div>
 		</div>
 			<div class="info-content">
