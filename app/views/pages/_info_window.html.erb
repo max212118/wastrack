@@ -1,8 +1,8 @@
 <p><%= container.location %></p>
-<p>taux de remplissage:<%= container.filling_level %> %</p>
+<p>Taux de remplissage: <%= container.filling_level %> %</p>
 <div class="container-photo">
   <%= cl_image_tag container.photo.key, size: "150"%>
   <div class="infos-container">
-  <%=link_to "En savoir plus", container_path(container) %>
+  <%=link_to "En savoir plus", container_path(container), class: "btn-map-card-dashboard" %>
   </div>
 </div>
