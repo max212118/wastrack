@@ -94,75 +94,21 @@
 				</section>
 			</div>
 		</div>
-
-
-		<%# <div id="graphdiv">
-		<div class="card-category">
-			<div class="button-container d-flex justify-content-around">
-			<div class="btn btn-success" id="day">Jour</div>
-			<div class="btn btn-success" id="week">Semaine</div>
-			<div class="btn btn-success" id="month">Mois</div>
-			</div> %>
-			<%# <div class="active" id="day-chart" data-hello_controller-target="chart"> %>
-				<%#= column_chart ContainerFillingLevel.group_by_day(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%>
-			<%# </div>
-			<div class="d-none" id="week-chart" data-hello_controller-target="chart"> %>
-				<%#= column_chart ContainerFillingLevel.group_by_week(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%>
-			<%# </div>
-			<div class="d-none" id="month-chart" data-hello_controller-target="chart"> %>
-				<%#= column_chart ContainerFillingLevel.group_by_month(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%>
-			<%# </div>
-		</div>
-		</div> %>
-
-    <div id="truckdiv">
-      <div class="card-category" id= "trucks-card">
+    <div id="container-savings">
+      <div class="card-category" id= "statistics-card">
         <div class="statistics-menu">
-            <div>
-              <h5>Flotte de véhicules</h5>
-            </div>
-            <div>
-              <%= link_to dashboard_path do %>
-                <button type="button" class="btn btn-warning">Voir plus</button>
-              <% end %>
-            </div>
+          <div>
+            <h5>Type de déchets</h5>
+          </div>
+          <div>
+            <%= link_to economies_path do %>
+              <%# <button type="button" class="btn btn-warning">Voir plus</button> %>
+            <% end %>
+          </div>
         </div>
-        <div class= "container-plates">
-          <ul>
-            <%count = 1%>
-            <% @trucks.each do |truck| %>
-              <div class="container-plate-driver d-flex justify-content-between">
-
-				<!-- Modal -->
-				<div class="modal fade" id="modal_<%= truck.id %>" tabindex="-1" aria-hidden="true">
-					<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">INFORMATION</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-						<%= render "trucks/truckshow", truck: truck, count: count %>
-						</div>
-						<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						</div>
-					</div>
-					</div>
-				</div>
-					<div class="container-plate" data-bs-toggle="modal" data-bs-target="#modal_<%= truck.id %>">
-					<li><span class="registration-ui"><%= truck.plate_number %></span>
-					</div>
-					<div class="plate-driver">
-					</li>
-					</div>
-				</div>
-				<% count += 1 %>
-				<% end %>
-			</ul>
-			</div>
-		</div>
-		</div>
+        <div><%= pie_chart Container.group(:waste_type).count,colors: ["#6e92d4","#ffb1b1","#FFEDB7","#BEDEBC"], height: "400px", donut: true%></div>
+      </div>
+    </div>
 
     <div id="container-savings">
       <div class="card-category" id= "statistics-card">
@@ -181,36 +127,3 @@
     </div>
   </div>
 </div>
-
-
-<%# <script>
-var select_format = () => {
-  day = document.getElementById("day");
-  week = document.getElementById("week");
-  month = document.getElementById("month");
-
-  day.addEventListener("click", (event) => {
-     document.getElementById("day-chart").classList.add("active");
-     document.getElementById("day-chart").classList.remove("d-none");
-     document.getElementById("week-chart").classList.add("d-none");
-     document.getElementById("month-chart").classList.add("d-none");
-
-  });
-
-  week.addEventListener("click", (event) => {
-    document.getElementById("week-chart").classList.add("active");
-    document.getElementById("week-chart").classList.remove("d-none");
-    document.getElementById("day-chart").classList.add("d-none");
-    document.getElementById("month-chart").classList.add("d-none");
-  });
-
-  month.addEventListener("click", (event) => {
-     document.getElementById("month-chart").classList.add("active");
-     document.getElementById("month-chart").classList.remove("d-none");
-       document.getElementById("week-chart").classList.add("d-none");
-     document.getElementById("day-chart").classList.add("d-none");
-  });
-}
-
-select_format();
-</script> %>
