@@ -1,10 +1,10 @@
 <div class="title-roads">
 <h1>Découvrez l'historique de votre flotte.</h1>
 </div>
-<div class="main-container m-3">
+<div class="main-container m-5">
     <div class="container-roads-menu">
         <div class="roads-title">
-            <h5>Carte des conteneurs</h5>
+              <h5>Conteneurs ramassés le <mark id="highlight"><%= l(@roads[params["index"].to_i].date, format: '%d %B %Y')%></mark></h5>
         </div>
         <div class="button-roads">
             <%= link_to dashboard_path do %>
@@ -58,10 +58,10 @@
                             <%else%>
                             <tr class="prioirty-600">
                             <%end%>
-                                <td><%=road.date%></td>
+                                <td><%=l(road.date, format: '%d %B %y')%></td>
                                 <td><%=road.road_containers.count%></td>
                                 <td><i class="fa fa-circle"></i><%=road.kilometers%> km</td>
-                                <td>190</td>
+                                <td><%=200 - (2 * road.kilometers)%> kg</td>
                                 <td>
                                 <%# <button><i class="fa fa-trash"></i></button> %>
                                 <%= link_to roads_path(index: index) do %>
