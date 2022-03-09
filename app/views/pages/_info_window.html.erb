@@ -8,7 +8,13 @@
     </div>
   </div>
 <%else %>
-  <p><%= container.location %></p>
-  <h1>Incendie signalé</h1>
-  </div>
+    <div>
+      <p><%= container.location %></p>
+    </div>
+    <div class="mb-2">
+      <%= cl_image_tag container.photo.key, size: "150"%>
+    </div>
+    <div>
+        <%=link_to "Informer mes employés", dashboard_path, class: "btn-map-card-dashboard"%>
+    </div>
 <%end %>
