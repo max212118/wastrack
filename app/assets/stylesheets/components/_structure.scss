@@ -44,7 +44,7 @@
   padding: 20px;
 }
 
-.card-title { 
+.card-title {
   text-align: center;
   font-weight: bold;
   font-family: helvetica, ariel, sans-serif;
@@ -185,4 +185,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.btn-map-card-dashboard {
+  color: white;
+  background-color: #BEDEBC;
+  padding: 3px;
+  border-radius: 5%;
+  text-decoration: none;
+}
+
+.btn-map-card-dashboard:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #839e81;
 }
