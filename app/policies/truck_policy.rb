@@ -24,7 +24,10 @@ class TruckPolicy < ApplicationPolicy
   end
 
   def new?
-    # user.employee_category == "city employee"
+    #user.employee_category == "city employee"
+    return true if user.present?
+  end
+  def create?
     return true if user.present?
   end
 end

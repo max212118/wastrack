@@ -5,5 +5,7 @@
     <p> <%= truck.city_hall.name %> </p>
     <p><%= "team #{count}" %></p>
   </div>
-  <%= cl_image_tag truck.photo.key, size: "150"%>
+  <% unless truck.photo.key.nil? %>
+    <%= cl_image_tag truck.photo.key, size: "150"%>
+  <% end %>
 </div>
