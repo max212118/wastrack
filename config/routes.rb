@@ -16,5 +16,5 @@ Rails.application.routes.draw do
     resources :containers, only: [:index, :update, :show]
     resources :roads, only: [:index, :update, :show]
     resources :road_containers, only: [:update, :show]
-    resources :trucks, only: [:index, :show]
+    resources :trucks, only: [:index, :show, :update, :create, :new, :destroy, :edit]
 end
