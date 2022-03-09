@@ -1,8 +1,8 @@
 <ul>
   <%@trucks.each do |truck| %>
-  <div class="card-truck">
+  <div class="card-truck-view">
   <div class = "container-plate" ></div>
-      <li><span class="registration-ui"><%= truck.plate_number %></span></li>
+      <li><span class="registration-ui-truck"><%= truck.plate_number %></span></li>
       <div class="text-center">
         <h2 class="lh-1"> Mairie : <strong><%=truck.city_hall.name%></strong></h2>
         <p class="lh-1"><strong> Kilometers : </strong><%= truck.kilometers %></p>
@@ -12,7 +12,7 @@
             Edit  <i class="fas fa-pencil-alt"></i>
           <% end %>
 
-          <%= link_to truck_path(truck), method: :delete, data: {confirm: "Are you sure?"} do %>
+          <%= link_to truck_path(truck), method: :delete, data: {confirm: "Etes-vous surs?"} do %>
             Delete  <i class="far fa-trash-alt"></i>
           <% end %>
         </div>
@@ -20,6 +20,6 @@
   </div>
   <%end%>
   <div class= "d-flex justify-content-center">
-    <%= link_to "Add a truck", new_truck_path, class: 'btn-add-truck' %>
+    <%= link_to "Ajouter un camion", new_truck_path, class: 'btn-add-truck' %>
   </div>
 </ul>
