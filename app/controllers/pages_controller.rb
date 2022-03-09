@@ -17,6 +17,7 @@ class PagesController < ApplicationController
     @trucks = Truck.all
     @roads = @trucks.map(&:roads).flatten
     @road_containers = RoadContainer.all
+	@chatroom = Chatroom.first
 
     @markers = @containers.geocoded.map do |container|
      {

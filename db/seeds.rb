@@ -15,6 +15,9 @@ Road.destroy_all
 User.destroy_all
 Truck.destroy_all
 CityHall.destroy_all
+Chatroom.destroy_all
+
+chatroom_megeve = Chatroom.create!(name: "General")
 
 city_hall_megeve = CityHall.create!(name: "Megeve")
 

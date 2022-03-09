@@ -15,6 +15,7 @@
       <%= cl_image_tag container.photo.key, size: "150"%>
     </div>
     <div>
-        <%=link_to "Informer mes employés", dashboard_path, class: "btn-map-card-dashboard"%>
+        <%=link_to "Informer mes employés", chatroom_path(@chatroom), class: "btn-map-card-dashboard"%>
+        <%#=Message.new(content: "Quelqu'un à proximité du conteneur situé #{container.location} ?", chatroom_id: @chatroom.id, user_id: current_user.id)%>
     </div>
 <%end %>
