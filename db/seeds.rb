@@ -18,8 +18,8 @@ CityHall.destroy_all
 
 city_hall_megeve = CityHall.create!(name: "Megeve")
 
-user1 = User.create!(first_name: 'Maxence', last_name: 'Tarnaud', email:'maxence.trnd@gmail.com', password: '123456', admin: true, phone_number: '0664929923')
-user2 = User.create!(first_name: 'Krystof', last_name: 'Novak', email:'krystof.novak@gmail.com', password: '123456', admin: true, phone_number: '0664929924')
+user1 = User.create!(first_name: 'Maxence', last_name: 'Tarnaud', email:'maxence.trnd@gmail.com', password: '123456', admin: true, phone_number: '0664929923', city_hall_id: city_hall_megeve.id)
+user2 = User.create!(first_name: 'Krystof', last_name: 'Novak', email:'krystof.novak@gmail.com', password: '123456', admin: true, phone_number: '0664929924', city_hall_id: city_hall_megeve.id)
 user3 = User.create!(first_name: 'Eli', last_name: 'Renucci', email:'eli.renucci@gmail.com', password: '123456',employee_id: 'AZERT',employee_category: 'city_employee', admin: false, city_hall_id: city_hall_megeve.id, phone_number: '0664929925')
 user4 = User.create!(first_name: 'Kosta', last_name: 'Cucuz', email:'kosta.cucuz@gmail.com', password: '123456',employee_id: 'YUIOP', employee_category: 'city_employee', admin: false, city_hall_id: city_hall_megeve.id, phone_number: '0664929926')
 user5 = User.create!(first_name: 'Phillipine', last_name: 'Doligez', email:'phillipine.doligez@gmail.com', password: '123456',employee_id: 'QSDFG',employee_category: 'collector', admin: false, city_hall_id: city_hall_megeve.id, phone_number: '0664929927')
@@ -116,7 +116,7 @@ new_roads = [road1, road2]
 old_roads.each do |r|
     containers = Container.all
     containers_c = []
-    10.times do 
+    10.times do
         containers_c << containers.sample
         containers = containers - containers_c
     end
@@ -135,7 +135,7 @@ end
 new_roads.each do |r|
     containers = Container.all
     containers_c = []
-    4.times do 
+    4.times do
         containers_c << containers.sample
         containers = containers - containers_c
     end
