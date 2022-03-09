@@ -1,6 +1,6 @@
 
-<div class= "form-truck-div">
-  <div class="card-category p-3 d-flex flex-column align-items-center">
+<div class= "container-truck">
+  <div class= "form-truck-div">
     <%= image_tag "garbage-truck.png", size: "70" %>
     <%= simple_form_for(@truck) do |f| %>
     <%= f.input :plate_number, label: "Plaque D'imatriculation", placeholder: "ex :AB567SK", input_html: {class:"new-truck-input1"} %>

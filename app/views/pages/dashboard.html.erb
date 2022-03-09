@@ -79,11 +79,15 @@
 							</div>
 						</div>
 						<div class="info-comp">
+						<%count = 0 %>
+						<%@containers.each do |container|%>
+						  <%count += 1 if container.temperature > 50%>
+						<%end%>
 						<%# en dur pour l'instant: %>
-							<div class="box bg-success p-3">
-							<i class="fa-solid fa-comment-medical"></i>
-							<h3>0</h3>
-							<p class="lead">Problèmes en attentes</p>
+							<div class="box bg-danger p-3">
+								<i class="fa-solid fa-comment-medical"></i>
+								<h3><%=count %></h3>
+								<p class="lead">Problèmes en attentes</p>
 							</div>
 						</div>
 					</div>

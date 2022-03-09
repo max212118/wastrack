@@ -1,3 +1,14 @@
 
-
-<h1>test</h1>
+<div class= "form-truck-div">
+  <div class="card-category p-3 d-flex flex-column align-items-center">
+    <%= image_tag "garbage-truck.png", size: "70" %>
+    <%= simple_form_for(@truck) do |f| %>
+    <%= f.input :plate_number, label: "Plaque D’imatriculation", placeholder: "ex :AB567SK", input_html: {class:"new-truck-input1"} %>
+    <%= f.input :kilometers, label: "Kilomètres", placeholder: "ex : 250988",input_html: { class: 'new-truck-input2'} %>
+    <%#= f.input :city_hall, label: "Mairie Correspondante", placeholder: "..."%>
+    <div class="w-100 d-flex justify-content-center">
+      <%= f.button :submit, class:"form-btn-new-truck" %>
+    </div>
+    <% end %>
+  </div>
+</div>

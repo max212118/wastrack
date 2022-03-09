@@ -1,8 +1,20 @@
-<p><%= container.location %></p>
-<p>taux de remplissage:<%= container.filling_level %> %</p>
-<div class="container-photo">
-  <%= cl_image_tag container.photo.key, size: "150"%>
-  <div class="infos-container">
-  <%=link_to "En savoir plus", container_path(container) %>
+<%if container.temperature < 50 %>
+  <p><%= container.location %></p>
+  <p>taux de remplissage:<%= container.filling_level %> %</p>
+  <div class="container-photo">
+    <%= cl_image_tag container.photo.key, size: "150"%>
+    <div class="infos-container">
+    <%=link_to "En savoir plus", container_path(container), class: "btn-map-card-dashboard"  %>
+    </div>
   </div>
-</div>
+<%else %>
+    <div>
+      <p><%= container.location %></p>
+    </div>
+    <div class="mb-2">
+      <%= cl_image_tag container.photo.key, size: "150"%>
+    </div>
+    <div>
+        <%=link_to "Informer mes employés", dashboard_path, class: "btn-map-card-dashboard"%>
+    </div>
+<%end %>
