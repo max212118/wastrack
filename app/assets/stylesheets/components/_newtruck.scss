@@ -17,19 +17,21 @@
   background-color: #9CA6FF;
 }
 .form-truck-div {
-  min-height: 100vh;
+  min-height: 92vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.container-truck {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 170px;
 }
 
-.new-truck-input{
-  width: 85px !important;
+.new-truck-input1{
+  width: 650px !important;
+  padding: 8px !important;
+}
+.new-truck-input2{
+  width: 650px !important;
   padding: 8px !important;
 }
