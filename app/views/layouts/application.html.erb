@@ -19,14 +19,15 @@
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
 	
 	<%# "common-container" rajoute une margin left pour la sidebar (toute les pages sauf la home) %>
-	<%= render 'shared/sidebar-1' unless url_for == '/' %>
-	<% unless url_for == '/' %>
+  <% no_sidebar = ["/users/sign_in", "/", "users/sign_up"] %>
+	<%= render 'shared/sidebar-1' unless no_sidebar.include?(url_for) %>
+	<% unless no_sidebar.include?(url_for) %>
 		<div class="common-container">
-	<% end %>
-			<%= render 'shared/navbar' %>
-			<%= render 'shared/flashes' %>
-			<%= yield %>
-	<% unless url_for == '/' %>
+      <% end %>
+          <%= render 'shared/navbar' %>
+          <%= render 'shared/flashes' %>
+          <%= yield %>
+      <% unless no_sidebar.include?(url_for) %>
 		</div>
 	<% end %>
   </body>
