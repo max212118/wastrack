@@ -10,6 +10,7 @@
 <%else %>
     <div>
       <p><%= container.location %></p>
+      <p>Temperature critique <%= container.temperature %> °C</p>
     </div>
     <div class="mb-2">
       <%= cl_image_tag container.photo.key, size: "150"%>

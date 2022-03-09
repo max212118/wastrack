@@ -50,52 +50,52 @@ road2_2021 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new
 road2_2017 = Road.create!(user_id: user3.id, truck_id: truck2.id, date: Date.new(2017), kilometers: 60)
 
 
-container1 = Container.create!(temperature: 18, filling_level: 20, location: '747 Rte de Prariand, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
+container1 = Container.create!(temperature: 18, filling_level: 20, location: '747 Rte de Prariand, 74120 Megève', waste_type: "verre" , broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container2 = Container.create!(temperature: 15, filling_level: 40, location: '2635 Rte du Jaillet, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
+container2 = Container.create!(temperature: 15, filling_level: 40, location: '2635 Rte du Jaillet, 74120 Megève', waste_type: "plastique", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container3 = Container.create!(temperature: 13, filling_level: 60, location: '1201 Rte du Jaillet, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
+container3 = Container.create!(temperature: 13, filling_level: 60, location: '1201 Rte du Jaillet, 74120 Megève', waste_type: "plastique" , broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container4 = Container.create!(temperature: 10, filling_level: 70, location: "77 Rte d'Ormaret, 74120 Demi-Quartier", broken: false, city_hall_id: city_hall_megeve.id)
+container4 = Container.create!(temperature: 10, filling_level: 70, location: "77 Rte d'Ormaret, 74120 Demi-Quartier", waste_type: "reste", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container5 = Container.create!(temperature: 12, filling_level: 70, location: "1476 Route De Vers Le Nant, 74120 Demi-Quartier, France", broken: false, city_hall_id: city_hall_megeve.id)
+container5 = Container.create!(temperature: 12, filling_level: 70, location: "1476 Route De Vers Le Nant, 74120 Demi-Quartier, France", waste_type: "verre", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container6 = Container.create!(temperature: 80, filling_level: 40, location: '116 Rte de la Côté 2000, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
+container6 = Container.create!(temperature: 80, filling_level: 40, location: '116 Rte de la Côté 2000, 74120 Megève', waste_type: "plastique", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container7 = Container.create!(temperature: 17, filling_level: 30, location: '2017 Rte du Leutaz, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
+container7 = Container.create!(temperature: 17, filling_level: 30, location: '2017 Rte du Leutaz, 74120 Megève', waste_type: "papier", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container8 = Container.create!(temperature: 9, filling_level: 80, location: '42 Rte des Nards, 74120 Praz-sur-Arly', broken: false, city_hall_id: city_hall_megeve.id)
+container8 = Container.create!(temperature: 9, filling_level: 80, location: '42 Rte des Nards, 74120 Praz-sur-Arly', waste_type: "plastique", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container9 = Container.create!(temperature: 18, filling_level: 90, location: '963 Rte du Feug, 74920 Combloux', broken: false, city_hall_id: city_hall_megeve.id)
+container9 = Container.create!(temperature: 18, filling_level: 90, location: '963 Rte du Feug, 74920 Combloux', waste_type: "verre", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container10 = Container.create!(temperature: 22, filling_level: 40, location: '515 Rte du Bouchet, 74920 Combloux', broken: false, city_hall_id: city_hall_megeve.id)
+container10 = Container.create!(temperature: 22, filling_level: 40, location: '515 Rte du Bouchet, 74920 Combloux', waste_type: "plastique", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container11 = Container.create!(temperature: 21, filling_level: 80, location: '1760 Rte du Vernay, 74920 Combloux', broken: false, city_hall_id: city_hall_megeve.id)
+container11 = Container.create!(temperature: 21, filling_level: 80, location: '1760 Rte du Vernay, 74920 Combloux', waste_type: "plastique", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container12 = Container.create!(temperature: 16, filling_level: 100, location: '444 Rte de la Grange, 74920 Combloux', broken: false, city_hall_id: city_hall_megeve.id)
+container12 = Container.create!(temperature: 16, filling_level: 100, location: '444 Rte de la Grange, 74920 Combloux', waste_type: "reste", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container13 = Container.create!(temperature: 15, filling_level: 10, location: 'Chem. du Giroux, 74170 Saint-Gervais-les-Bains', broken: false, city_hall_id: city_hall_megeve.id)
+container13 = Container.create!(temperature: 15, filling_level: 10, location: 'Chem. du Giroux, 74170 Saint-Gervais-les-Bains', waste_type: "plastique", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container14 = Container.create!(temperature: 13, filling_level: 60, location: '163 Chem. de Bornand, 74120 Demi-Quartier', broken: false, city_hall_id: city_hall_megeve.id)
+container14 = Container.create!(temperature: 13, filling_level: 60, location: '163 Chem. de Bornand, 74120 Demi-Quartier', waste_type: "plastique", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container15 = Container.create!(temperature: 16, filling_level: 80, location: '3351 Rte Edmond de Rothschild, 74120 Megève', broken: false, city_hall_id: city_hall_megeve.id)
+container15 = Container.create!(temperature: 16, filling_level: 80, location: '3351 Rte Edmond de Rothschild, 74120 Megève', waste_type: "papier", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
-container16 = Container.create!(temperature: 12, filling_level: 100, location: '42 Chemin Des Raverots, 74120 Megève, France', broken: false, city_hall_id: city_hall_megeve.id)
+container16 = Container.create!(temperature: 12, filling_level: 100, location: '42 Chemin Des Raverots, 74120 Megève, France', waste_type: "reste", broken: false, city_hall_id: city_hall_megeve.id)
 
 SeedContainerFillingLevels.new(Container.last).call
 
