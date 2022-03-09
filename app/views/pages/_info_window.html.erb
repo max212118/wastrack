@@ -1,8 +1,14 @@
-<p><%= container.location %></p>
-<p>taux de remplissage:<%= container.filling_level %> %</p>
-<div class="container-photo">
-  <%= cl_image_tag container.photo.key, size: "150"%>
-  <div class="infos-container">
-  <%=link_to "En savoir plus", container_path(container) %>
+<%if container.temperature < 50 %>
+  <p><%= container.location %></p>
+  <p>taux de remplissage:<%= container.filling_level %> %</p>
+  <div class="container-photo">
+    <%= cl_image_tag container.photo.key, size: "150"%>
+    <div class="infos-container">
+    <%=link_to "En savoir plus", container_path(container) %>
+    </div>
   </div>
-</div>
+<%else %>
+  <p><%= container.location %></p>
+  <h1>Incendie signalé</h1>
+  </div>
+<%end %>
