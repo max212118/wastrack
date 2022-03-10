@@ -1,0 +1,90 @@
+#economies-inline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.waste_type_width {
+  width: 100% !important;
+}
+
+.plastic-color {
+    background-color: #c3d8f8;
+}
+
+.paper-color {
+    background-color: #ebb0b0 !important;
+}
+
+.reste-color {
+    background-color: #f8f5c3 !important;
+}
+
+.container-savings-km-carbone{
+    display: flex;
+}
+
+.container-stats-economies {
+    display: flex;
+}
+
+.container-left-stats {
+    flex-grow: 1;
+}
+
+.savings-km{
+    background-color: white;
+    padding: 2%;
+    margin: 1%;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.savings-carbone{
+    background-color: white;
+    width: 50%;
+    padding: 2%;
+    margin: 1%;
+    border-radius: 5px;
+}
+
+.container-weight-waste-types {
+   .lead{
+       height: 10px;
+   }
+}
+
+.container-right-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: white;
+    margin: 1%;
+    padding:1%;
+    width: 20vh;
+    height: 90vh;
+}
+
+.card-about-hours {
+    height: 20%;
+    border-radius: 50%;
+    background-color: #F0F6EF;
+}
+
+.card-about-km {
+    height: 20%;
+    border-radius: 50%;
+    background-color: #F0F6EF;
+}
+
+.card-about-money {
+    height: 20%;
+    border-radius: 50%;
+    background-color: #F0F6EF;
+}
+
+.card-about-carbone {
+    height: 20%;
+    border-radius: 50%;
+    background-color: #F0F6EF;
+}
