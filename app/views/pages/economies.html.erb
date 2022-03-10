@@ -1,6 +1,9 @@
 <div class="container">
     <div class="container-stats-economies">
         <div class="container-left-stats">
+            <div class="container-mots-explications">
+              <h1>Vos economies,</h1>
+            </div>
             <div class="container-weight-waste-types">
                 <section class="statis mt-4 text-center" id= "economies-inline">
                     <div class="container-verre info-top">
@@ -62,29 +65,48 @@
             </div>
             <div class="container-savings-km-carbone">
                 <div class="savings-carbone">
-                <div><%= area_chart Road.group_by_year(:date).average(:kilometers), defer: true, height: "400px", colors: ["#85C883"]%></div>
+                    <h5>Trajet quotidien en <mark id="highlight-green">kilometres</mark></h5>
+                    <div><%= area_chart Road.group_by_year(:date).average(:kilometers), defer: true, height: "400px", colors: ["#85C883"]%></div>
                 </div>
                 <div class="savings-km">
-                <div><%= area_chart Road.group_by_year(:date).average(:kilometers), defer: true, height: "400px", colors: ["#eee887"]%></div>
+                    <h5>CO2 rejeté en <mark id="highlight-yellow">tonnes</mark></h5>
+                    <div><%= area_chart @h, defer: true, height: "400px", colors: ["#eee887"]%></div>
                 </div>
             </div>
         </div>
         <div class="container-right-stats">
-            <div class="card-about-km">
+
+            <div class="card-about-savings-title">
+              <h5>Economies</h5>
+            </div>
+
+            <div class="card-about-savings">
               <i class="fa-solid fa-gas-pump"></i>
-              <h5></h5>
+              <div class="savings-in-numbers">
+                <h2>80 L</h2>
+              </div>
             </div>
 
-            <div class="card-about-carbone">
-              <i class="fa-solid fa-euro-sign"></i>
+            <div class="card-about-savings">
+              <i class="fa-solid fa-money-bill"></i>
+              <div class="savings-in-numbers">
+                <h2>2000 €</h2>
+              </div>
             </div>
 
-            <div class="card-about-hours">
-              <i class="fa-solid fa-cloud"></i>
+            <div class="card-about-savings">
+              <i class="fa-solid fa-clock"></i>
+              <div class="savings-in-numbers">
+                <h2>40h</h2>
+              </div>
             </div>
 
-            <div class="card-about-money">
-               <i class="fa-solid fa-cloud"></i>
+            <div class="card-about-savings">
+               <%# <i class="fa-solid fa-cloud"></i> %>
+               <p>CO2</p>
+              <div class="savings-in-numbers">
+                 <h2>3T</h2>
+              </div>
             </div>
         </div>
     </div>

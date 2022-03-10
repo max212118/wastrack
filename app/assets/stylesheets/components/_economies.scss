@@ -59,32 +59,92 @@
     justify-content: space-around;
     border-radius: 10px;
     background-color: white;
-    margin: 1%;
+    margin: 3% 1%;
     padding:1%;
     width: 20vh;
-    height: 90vh;
+    height: 85vh;
 }
 
-.card-about-hours {
-    height: 20%;
-    border-radius: 50%;
-    background-color: #F0F6EF;
+.card-about-savings {
+    height: 18%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10%;
+    padding: 8px;
+    background-color: #C3E3C1;
+
+    i {
+      font-size: 20px;
+      color:#377752;
+    }
+
+    p {
+      font-size: 20px;
+      color:#377752;
+      font-weight:bolder;
+    }
 }
 
-.card-about-km {
-    height: 20%;
-    border-radius: 50%;
-    background-color: #F0F6EF;
+.savings-in-numbers {
+    display: flex;
+    justify-content: center;
+    padding-top: 15%;
+
+    h2 {
+        color: #377752;
+    }
 }
 
-.card-about-money {
-    height: 20%;
-    border-radius: 50%;
-    background-color: #F0F6EF;
+.container-mots-explications {
+    margin: 4% 0 0 1%;
 }
 
-.card-about-carbone {
-    height: 20%;
-    border-radius: 50%;
-    background-color: #F0F6EF;
+.card-about-savings-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h5{
+        color: #377752;
+    }
 }
+
+.savings-km {
+    color: #A18233;
+}
+
+.savings-carbone {
+    color: #377752;
+
+}
+
+#highlight-green {
+  color: #538969;
+  background-color: #BEDEBC;
+}
+
+#highlight-yellow {
+  color:#A18233;
+  background-color: #F7F5C3;
+}
+// .card-about-km {
+    //     height: 18%;
+//     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+//     border-radius: 10%;
+//     padding: 4px;
+//     background-color: #C3E3C1;
+// }
+
+// .card-about-money {
+//     height: 18%;
+//     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+//     border-radius: 10%;
+//     padding: 4px;
+//     background-color: #C3E3C1;
+// }
+
+// .card-about-carbone {
+//     height: 18%;
+//     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+//     border-radius: 10%;
+//     padding: 4px;
+//     background-color: #C3E3C1;
+// }
