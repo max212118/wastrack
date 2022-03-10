@@ -1,1 +1,91 @@
-Economies
+<div class="container">
+    <div class="container-stats-economies">
+        <div class="container-left-stats">
+            <div class="container-weight-waste-types">
+                <section class="statis mt-4 text-center" id= "economies-inline">
+                    <div class="container-verre info-top">
+                        <div class="info-comp waste_type_width">
+                            <div class="box bg-success p-3">
+                                <i class="fa-solid fa-wine-bottle"></i>
+                                <%count = 0%>
+                                <% @containers.each do |container|%>
+                                <%count += 1 if container.waste_type == 'verre'%>
+                                <%end %>
+                                <h3><%= count * 10.5%> T</h3>
+                                <p class="lead">verre en <%=l(Date.today, format: "%B")%></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-papier info-top">
+                        <div class="info-comp waste_type_width">
+                            <div class="box bg-danger p-3 paper-color">
+                                <i class="fa-solid fa-newspaper"></i>
+                                <%count = 0%>
+                                <% @containers.each do |container|%>
+                                <%count += 1 if container.waste_type == 'papier'%>
+                                <%end %>
+                                <h3><%= count * 10.5%> T</h3>
+                                <p class="lead">papier en <%=l(Date.today, format: "%B")%></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-plastique info-top">
+                        <div class="info-comp waste_type_width">
+                            <div class="box bg-plastique p-3 plastic-color">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <%count = 0%>
+                                <% @containers.each do |container|%>
+                                <%count += 1 if container.waste_type == 'plastique'%>
+                                <%end %>
+                                <h3><%= count * 10.5%> T</h3>
+                                <p class="lead">plastique en <%=l(Date.today, format: "%B")%></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-reste info-top">
+                        <div class="info-comp waste_type_width">
+                            <div class="box bg-warning p-3 reste-color">
+                                <i class="fa-solid fa-trash"></i>
+                                <%count = 0%>
+                                <% @containers.each do |container|%>
+                                <%count += 1 if container.waste_type == 'reste'%>
+                                <%end %>
+                                <h3><%= count * 10.5%> T</h3>
+                                <p class="lead">restes en <%=l(Date.today, format: "%B")%></p>
+                            </div>
+                        </div>
+                    </div>  
+                </section>
+            </div>
+            <div class="container-savings-km-carbone">
+                <div class="savings-carbone">
+                <div><%= area_chart Road.group_by_year(:date).average(:kilometers), defer: true, height: "400px", colors: ["#85C883"]%></div>
+                </div>
+                <div class="savings-km">
+                <div><%= area_chart Road.group_by_year(:date).average(:kilometers), defer: true, height: "400px", colors: ["#eee887"]%></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-right-stats">
+            <div class="card-about-km">
+              <i class="fa-solid fa-gas-pump"></i>
+              <h5></h5>
+            </div>
+
+            <div class="card-about-carbone">
+              <i class="fa-solid fa-euro-sign"></i>
+            </div>
+
+            <div class="card-about-hours">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+
+            <div class="card-about-money">
+               <i class="fa-solid fa-cloud"></i>
+            </div>
+        </div>
+    </div>
+</div>

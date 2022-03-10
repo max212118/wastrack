@@ -1,14 +1,14 @@
-<div class="title-roads">
-<h1>Découvrez l'historique de votre flotte.</h1>
+<div class="title-roads" style="margin-left: 3px; margin-top:48px">
+<h1>Découvrez l'historique de votre flotte</h1>
 </div>
 <div class="main-container m-5">
-    <div class="container-roads-menu">
+    <div class="container-roads-menu" style="margin-left: 3px">
         <div class="roads-title">
               <h5>Conteneurs ramassés le <mark id="highlight"><%= l(@roads[params["index"].to_i].date, format: '%d %B %Y')%></mark></h5>
         </div>
         <div class="button-roads">
             <%= link_to dashboard_path do %>
-            <button type="button" class="btn btn-warning">Retour au Dashboard</button>
+            <%# <button type="button" class="btn btn-warning">Retour au Dashboard</button> %>
             <% end %>
         </div>
     </div>
@@ -32,49 +32,51 @@
             </div>
         <% end %>
 
-        <div class="ms-3 me-0 scroll container table-containers" style="width: 59%;">
-            
-            <%# <form action="#" class="filter">
-                <input type="search" name="filtter" id="filtter" />
-                <button>filtter</button>
-            </form> %>
-            <div class="container-roads">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Date de tournée</th>
-                        <th>Conteneurs ramassés</th>
-                        <th>Km parcourus</th>
-                        <th>Economies CO2</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <%@roads.each_with_index do |road, index| %>
-                            <%if road.kilometers < 30 %>
-                            <tr class="prioirty-300">
-                            <%elsif road.kilometers <= 60%>
-                            <tr class="prioirty-200">
-                            <%else%>
-                            <tr class="prioirty-600">
-                            <%end%>
-                                <td><%=l(road.date, format: '%d %B %y')%></td>
-                                <td><%=road.road_containers.count%></td>
-                                <td><i class="fa fa-circle"></i><%=road.kilometers%> km</td>
-                                <td><%=200 - (2 * road.kilometers)%> kg</td>
-                                <td>
-                                <%# <button><i class="fa fa-trash"></i></button> %>
-                                <%= link_to roads_path(index: index) do %>
-                                    <i class="fa fa-map" id="map-icon-road"></i>
-                                    
-                                <% end %>
-                                </td>
-                            </tr>
-                    <%end%>
-                    </tbody>
-                </table>
+          <div class="ms-3 me-0 scroll container table-containers" style="width: 59%; padding:0px">
+            <div class= >
+              <div class="container-roads", style="background-color:#f8f9fa73; box-shadow:0px 4px 16px rgb(0 0 0 / 10%)">
+                  <table>
+                      <thead>
+                      <tr>
+                          <th>Date de tournée</th>
+                          <th>Conteneurs ramassés</th>
+                          <th>Km parcourus</th>
+                          <th>Economies CO2</th>
+                          <th></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <%@roads.each_with_index do |road, index| %>
+                              <%if road.kilometers < 30 %>
+                              <tr class="prioirty-300 road-row">
+                              <%elsif road.kilometers <= 60%>
+                              <tr class="prioirty-200 road-row">
+                              <%else%>
+                              <tr class="prioirty-600 road-row">
+                              <%end%>
+                                  <td><%=l(road.date, format: '%d %B %y')%></td>
+                                  <td><%=road.road_containers.count%></td>
+                                  <td><i class="fa fa-circle"></i><%=road.kilometers%> km</td>
+                                  <td><%=200 - (2 * road.kilometers)%> kg</td>
+                                  <td>
+                                  <%# <button><i class="fa fa-trash"></i></button> %>
+                                  <% if params["index"].to_i == index%>
+                                    <%= link_to roads_path(index: index) do %>
+                                      <i class="fa fa-map" class="map-icon-road-black"></i>
+                                    <% end %>
+                                  <% else %>
+                                    <%= link_to roads_path(index: index) do %>
+                                        <i class="fa fa-map" class="map-icon-road"></i>
+                                    <% end %>
+                                  <% end %>
+                                  </td>
+                              </tr>
+                      <%end%>
+                      </tbody>
+                  </table>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
 </div>
 
