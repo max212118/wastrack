@@ -52,6 +52,15 @@ class PagesController < ApplicationController
 
 	@average_fill = (real_last_array.sum / real_last_array.count).truncate(1)
 
+	@h = {
+                    "Sun, 01 Jan 2017".to_date => 12,
+                    "Sun, 01 Jan 2018".to_date => 10,
+                    "Sun, 01 Jan 2019".to_date => 11,
+                    "Sun, 01 Jan 2020".to_date => 10,
+                    "Sun, 01 Jan 2021".to_date => 13,
+                    "Sun, 01 Jan 2022".to_date => 4
+                } 
+
   end
 
   def dashboard
