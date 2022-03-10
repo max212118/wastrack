@@ -15,8 +15,6 @@
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   background-color: #F0F6F0;
-  // position: sticky;
-  // bottom: 0;
 }
 .footer-links {
   display: flex;
@@ -65,7 +63,7 @@
 
 .rapport {
   padding: 20px;
-  border: 1px solid lightgreen;
+  border: 1px solid 839e81;
 }
 
 .landingpage {
@@ -74,18 +72,33 @@
 }
 
 .first-part-text-landing {
-  padding: 200px 40px;
+  padding: 80px ;
+  height: 600px;
 }
 
+
 .second-part-text-landing {
-  padding: 300px 50px;
+  padding: 80px;
   background: white;
   border-radius: 4% 4% 0 0;
+}
+
+.advantages-landing-page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 .first-part-title-landing {
   font-weight: bold;
   font-size: 55px;
+  text-align: center;
+}
+
+.first-part-title-landing#opti {
+  text-align: left;
 }
 
 .second-part-title-landing {
@@ -94,35 +107,23 @@
   font-size: 55px;
 }
 
+.text-content{
+  text-align: center;
+}
+
+
 .iphone-landingpage {
   position: absolute;
-  padding-left: 550px;
-  margin-top: -358px;
+  top: 76px;
+  right: 70px;
 }
 
 .big-rond-landingpage {
   position: absolute;
-  padding-left: 649px;
-  margin-top: -244px;
+  top: 60px;
+  left: 1040px;
 }
 
-.small-rond-landingpage {
-  position: absolute;
-  padding-left: 771px;
-  margin-top: 40px;
-}
-
-.medium-rond-landingpage {
-  position: absolute;
-  padding-left: 1223px;
-  margin-top: -309px;
-}
-
-.line-travers-landingpage {
-  position: absolute;
-  padding-left: 909px;
-  margin-top: -483px;
-}
 
 .line-landingpage {
   position: absolute;
@@ -134,23 +135,15 @@
   color: white;
   padding: 10px;
   background-color: #65C18C;
+  border-radius: 4px;
 }
 
-.advantages-landing-page-title {
-  margin-top: -200px;
-}
 
 .icons-landing-page {
-  margin-top: 120px;
   text-align: center;
   display: flex;
+  margin-top: 40px;
 }
-
-.finger-div-landing {
-  padding-left: 120px;
-  padding-right: 120px;
-}
-
 .all-icons-landng {
   padding-bottom: 30px;
 }
@@ -159,32 +152,19 @@
   font-size: 12px;
 }
 
-.protect-div-landing {
-  padding-right: 120px;
-}
-
 .third-part-text-landing {
-  padding: 350px 50px;
-}
-
-.three-phone-landingpage {
-  position: absolute;
-  padding-left: 800px;
-  margin-top: -400px;
+  padding: 80px;
 }
 
 .third-part-title-landing {
-  position: absolute;
   font-weight: bold;
   font-size: 50px;
-  margin-top: -300px;
+  margin-bottom: 70px;
 }
 
 .landing-content {
-  height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .btn-map-card-dashboard {
@@ -200,6 +180,99 @@
   color: white;
   background-color: #839e81;
 }
+
+
+.third-part-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+$green:#65c18c;
+$yellow: #FFEDB6;
+
+%boxshadow {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $white;
+  color: $black;
+  font-family: 'Raleway', sans-serif;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+
+ol.gradient-list {
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+  > li {
+    background: white;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    @extend %boxshadow;
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    &::before,
+    &::after {
+      background: linear-gradient(135deg,$green 100%);
+      border-radius: 1rem 1rem 0 1rem;
+      content: '';
+      height: 3rem;
+      left: -1rem;
+      overflow: hidden;
+      position: absolute;
+      top: -1rem;
+      width: 3rem;
+    }
+    &::before {
+      align-items: flex-end;
+      @extend %boxshadow;
+      content: counter(gradient-counter);
+      color: $black;
+      display: flex;
+      font: 900 1.5em/1 'Montserrat';
+      justify-content: flex-end;
+      padding: 0.125em 0.25em;
+      z-index: 1;
+    }
+    @for $i from 1 through 5 {
+      &:nth-child(10n+#{$i}):before {
+        background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%,rgba($yellow, $i * 0.7) 100%);
+      }
+    }
+    @for $i from 6 through 10 {
+      &:nth-child(10n+#{$i}):before {
+        background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%,rgba($yellow, 2 - (($i - 5) * 0.2)) 100%);
+      }
+    }
+    + li {
+      margin-top: 2rem;
+    }
+  }
 
 .card-product.card-show-icons-map {
   margin-bottom: 50px;
