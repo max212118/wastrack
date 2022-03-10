@@ -1,0 +1,150 @@
+#economies-inline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.waste_type_width {
+  width: 100% !important;
+}
+
+.plastic-color {
+    background-color: #c3d8f8;
+}
+
+.paper-color {
+    background-color: #ebb0b0 !important;
+}
+
+.reste-color {
+    background-color: #f8f5c3 !important;
+}
+
+.container-savings-km-carbone{
+    display: flex;
+}
+
+.container-stats-economies {
+    display: flex;
+}
+
+.container-left-stats {
+    flex-grow: 1;
+}
+
+.savings-km{
+    background-color: white;
+    padding: 2%;
+    margin: 1%;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.savings-carbone{
+    background-color: white;
+    width: 50%;
+    padding: 2%;
+    margin: 1%;
+    border-radius: 5px;
+}
+
+.container-weight-waste-types {
+   .lead{
+       height: 10px;
+   }
+}
+
+.container-right-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: white;
+    margin: 3% 1%;
+    padding:1%;
+    width: 20vh;
+    height: 85vh;
+}
+
+.card-about-savings {
+    height: 18%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10%;
+    padding: 8px;
+    background-color: #C3E3C1;
+
+    i {
+      font-size: 20px;
+      color:#377752;
+    }
+
+    p {
+      font-size: 20px;
+      color:#377752;
+      font-weight:bolder;
+    }
+}
+
+.savings-in-numbers {
+    display: flex;
+    justify-content: center;
+    padding-top: 15%;
+
+    h2 {
+        color: #377752;
+    }
+}
+
+.container-mots-explications {
+    margin: 4% 0 0 1%;
+}
+
+.card-about-savings-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h5{
+        color: #377752;
+    }
+}
+
+.savings-km {
+    color: #A18233;
+}
+
+.savings-carbone {
+    color: #377752;
+
+}
+
+#highlight-green {
+  color: #538969;
+  background-color: #BEDEBC;
+}
+
+#highlight-yellow {
+  color:#A18233;
+  background-color: #F7F5C3;
+}
+// .card-about-km {
+    //     height: 18%;
+//     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+//     border-radius: 10%;
+//     padding: 4px;
+//     background-color: #C3E3C1;
+// }
+
+// .card-about-money {
+//     height: 18%;
+//     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+//     border-radius: 10%;
+//     padding: 4px;
+//     background-color: #C3E3C1;
+// }
+
+// .card-about-carbone {
+//     height: 18%;
+//     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+//     border-radius: 10%;
+//     padding: 4px;
+//     background-color: #C3E3C1;
+// }

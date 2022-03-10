@@ -1,7 +1,7 @@
 .mapboxgl-popup {
     max-width: 200px;
   }
-  
+
   .mapboxgl-popup-content {
     text-align: center;
     font-family: "Open Sans", sans-serif;
@@ -14,4 +14,14 @@
   .infos-container a{
     text-decoration: none;
     font-weight: bolder;
+  }
+
+  .mapboxgl-canvas-container.mapboxgl-interactive.mapboxgl-touch-drag-pan.mapboxgl-touch-zoom-rotate :nth-child(7) {
+    color:green;
+    animation: clignote 2s linear infinite;
+  }
+
+  @keyframes clignote {
+
+    90% { opacity: 0; }
   }

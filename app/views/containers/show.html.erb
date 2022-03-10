@@ -1,15 +1,20 @@
-<div class="card-container">
-    <div class="card-product">
-        <%= cl_image_tag @container.photo.key, size: "500"%>
-        <div class="card-product-infos">
-            <h2><%=@container.location %></h2>
-            <p>Taux de remplissage <strong><%=@container.filling_level %> %</strong></p>
-            <p>Temperature du conteneur <strong><%=@container.temperature %> °C</strong></p>
-        </div>
+<div class="card-container show-container-map">
+  <div class="card-product card-show-icons-map">
+    <div class="d-flex">
+      <%= cl_image_tag @container.photo.key%>
+      <div class="card-product-infos">
+        <p><i class="fas fa-map-marked-alt"> - <%=@container.location %></i></p>
+        <p><i class="fas fa-thermometer-half"> - <%=@container.temperature %> °C</i></p>
+      </div>
     </div>
-    <div>
-      <%= column_chart @container.container_filling_levels.group_by_day(:at).average(:level), defer: true, height: "400px", colors: ["#85C883"]%>
+    <div class="image-dumpster">
+      <%= image_tag "dumpster-solid.png", class: "image-container-show" %>
+      <p class="filling-rate-container-show"><strong><%=@container.filling_level %>%</strong></p>
     </div>
+  </div>
+  <div class="photo-plus-graph">
+    <div class="graph-container-show">
+      <%= column_chart @container.container_filling_levels.group_by_day(:at).average(:level), class: "graph-show-map-icons card-product", defer: true, height: "400px", colors: ["#85C883"]%>
+    </div>
+  </div>
 </div>
-
-

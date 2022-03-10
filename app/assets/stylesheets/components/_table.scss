@@ -6,7 +6,7 @@
 
 
 .table-containers{
-  background-color: #1e2a41;
+  background-color: #ffffff;
   // height: 80vh;
   padding: 50px 20px;
   border-radius: 5px;
@@ -42,14 +42,14 @@ input:focus{
 
 .filter button{
   width: 15%;
-  background-color: #1e2a41;
+  background-color: #EDF4F5;
   border: 1px solid #111d32;
 color: #99a5bd;
 cursor: pointer;
 font-weight: 500;
 }
 .filter button:hover{
-  background-color: #111d32;
+  background-color: #EDF4F5;
 }
 
 table{
@@ -64,10 +64,13 @@ table td{
   font-size: 14px;
 }
 table tr{
-  background-color: #162237;
+  background-color: #ffffff;
 }
 table tr:hover{
-  background-color: #111d32;
+  background-color: #bedebc;
+  td a {
+    color: #000000;
+  }
 }
 
 table tr th:first-of-type,
@@ -77,30 +80,30 @@ table tr td:first-of-type{
 }
 
 table .prioirty-200 td:first-of-type{
-  border-left: 4px solid #f3ad70;
+  border-left: 4px solid #ffedb7;
 }
 
 table .prioirty-300 td:first-of-type{
-  border-left: 4px solid #6fb39e;
+  border-left: 4px solid #bedebc;
 }
 
 table .prioirty-600 td:first-of-type{
-  border-left: 4px solid #7A1614;
+  border-left: 4px solid #fed6df;
 }
 table .prioirty-200 .fa-circle{
-  color: #f3ad70;
+  color: #ffedb7;
   margin-right: 10px;
   transform: scale(.5);
 }
 
 table .prioirty-300 .fa-circle{
-  color: #6fb39e;
+  color: #bedebc;
   margin-right: 10px;
   transform: scale(.5);
 }
 
 table .prioirty-600 .fa-circle{
-  color: #7A1614;
+  color: #fed6df;
   margin-right: 10px;
   transform: scale(.5);
 }
@@ -142,10 +145,15 @@ table tr:hover .fa-trash{
 .container-roads {
   height: 400px;
   overflow: auto;
+  border-style: solid;
+  border-color: #f8f9fa73;
+  table {
+    color: #377752;
+  }
 }
 /* Set header to stick to the top of the container. */
 thead tr th {
-  background-color: #1e2a41;
+  background-color:#F0F6F0;
   position: sticky;
   top: 0;
   z-index: 10000;
@@ -156,8 +164,40 @@ table tr th:first-of-type, table tr td:first-of-type {
   border-radius: 0px;
 }
 
-#map-icon-road{
-  color: aliceblue;
+.map-icon-road {
+  color: #abd8b1;
+}
+
+.map-icon-road:hover {
+  color: #000000;
+}
+
+.map-icon-road-black:hover {
+  color: #abd8b1;
+}
+
+.map-icon-road-black {
+  color: #263328;
+}
+
+.road-row {
+  a {
+    color: #bedebc;
+    // &:visited {
+    //   i {
+    //     color:black;
+    //   }
+    // }
+  }
+  &:hover {
+    i {
+      color: #377752;
+    }
+  }
+}
+
+.bold-map {
+  color: black;
 }
 
 .main-container {
