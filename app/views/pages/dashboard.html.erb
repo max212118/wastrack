@@ -8,10 +8,7 @@
       <div class="card-category p-3" style="width: 100%; height: 100%;">
       	<div class="statistics-menu">
           <div class= "d-flex" id="rec-effect">
-            <h5>Direct</h5>
-            <div id="rec-circle" class= "blink">
-              <i class="fa fa-circle"></i>
-            </div>
+            <h5>Carte</h5>
           </div>
           <div>
             <button type="button" class="btn btn-warning"><%= l( Date.today, format: '%d %B') %></button>
@@ -119,3 +116,22 @@
     </div>
   </div>
 </div>
+
+
+<script>
+	const ft = () => {
+
+		const markers = document.querySelectorAll(".marker");
+		markers.forEach ( mark => {
+			if (mark.style['backgroundImage'] === 'url("http://localhost:3000/assets/garbage-fire-2-77f3cfcf1f8d50ffc6b7cb75918ee0d00b2a9ea52d8026d600fd84d71f7fe967.png")') {
+				console.log(mark);
+				mark.classList.add("fire");
+			}
+			// console.log(mark.style['backgroundImage']);
+		});
+	}
+	document.addEventListener("turbolinks:load", () => {
+		setTimeout(ft, 1000);
+	})
+
+</script>
