@@ -1,22 +1,19 @@
 <div class="landingpage">
 
   <div class="first-part-text-landing">
-    <h1 class="first-part-title-landing">Optimisez votre</h1>
+    <h1 class="first-part-title-landing" id="opti">Optimisez votre</h1>
     <h1 class="second-part-title-landing">waste management</h1>
     <p>Un itinéraire de collecte optimisé en fonction du taux de <br>remplissage des conteneurs de la ville.</p>
     <%= link_to "Je demande une démo →", "#", class: "btn btn-success btn-landingpage" %>
-    <%= image_tag('Line.png', class: "line-landingpage") %>
-    <%= image_tag('line-travers.png', class: "line-travers-landingpage") %>
-    <%= image_tag('big-rond.png', class: "big-rond-landingpage") %>
-    <%= image_tag('small-rond.png', class: "small-rond-landingpage") %>
-    <%= image_tag('medium-rond.png', class: "medium-rond-landingpage") %>
-    <%= image_tag('iPhone 13 Pro.png', class: "iphone-landingpage") %>
   </div>
-
+      <%= image_tag('big-rond.png', class: "big-rond-landingpage") %>
+      <%= image_tag('iPhone 13 Pro.png', class: "iphone-landingpage") %>
   <div class="second-part-text-landing">
     <div class="advantages-landing-page-title">
-      <h1 class="first-part-title-landing">Nos avantages</h1>
-      <p>Wastrack vous apporte des nombreux avantages en termes <br>d'organisations et de gain de temps qui passent par des fonctionnalités pensées pour vous.</p>
+      <div>
+        <h1 class="first-part-title-landing">Nos avantages</h1>
+        <p class= "text-content" >Wastrack vous apporte des nombreux avantages en termes <br>d'organisations et de gain de temps qui passent par des fonctionnalités pensées pour vous.</p>
+      </div>
       <div class="icons-landing-page">
         <div class="camembert-div-landing">
           <%= image_tag('camembert.png', class: "first-icon-landing all-icons-landng") %>
@@ -43,23 +40,26 @@
   </div>
 
   <div class="third-part-text-landing">
-    <h1 class="third-part-title-landing">Une application <br>mobile pour les <br>collecteurs</h1>
-    <ul class="landing-content">
-      <li>
-      <%= image_tag('Line 1.png', class: "landing-line-1") %>
-      <span class="landing-content-third-part"> Commencez votre journée facilement</span>
-      </li>
-      <li>
-      <%= image_tag('Line 1.png', class: "landing-line-2 content-landing-third") %>
-      <span class="landing-content-third-part"> Suivez la route optimisée par l’application</span>
-      </li>
-      <li>
-      <%= image_tag('Line 1.png', class: "landing-line-3") %>
-      <span class="landing-content-third-part content-landing-third"> Signalez tout problème</span>
-      </li>
-    </ul>
+    <div class= "third-part-flex">
+
+      <ol class="gradient-list">
+        <h1 class="third-part-title-landing">Une application <br>mobile pour les <br>collecteurs</h1>
+       <li>
+         <%#= image_tag('Line 1.png', class: "landing-line-1") %>
+          Commencez votre journée facilement
+       </li>
+       <li>
+         <%#= image_tag('Line 1.png', class: "landing-line-2 content-landing-third") %>
+          la route optimisée par l’application
+       </li>
+       <li>
+         <%#= image_tag('Line 1.png', class: "landing-line-3") %>
+          Signalez tout problème
+       </li>
+    </ol>
 
     <%= image_tag('3-phone.png', class: "three-phone-landingpage") %>
+  </div>
   </div>
 
   <div class="footer">
