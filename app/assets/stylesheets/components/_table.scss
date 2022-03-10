@@ -147,6 +147,9 @@ table tr:hover .fa-trash{
   overflow: auto;
   border-style: solid;
   border-color: #f8f9fa73;
+  table {
+    color: #377752;
+  }
 }
 /* Set header to stick to the top of the container. */
 thead tr th {
