@@ -16,12 +16,21 @@
     font-weight: bolder;
   }
 
-  .mapboxgl-canvas-container.mapboxgl-interactive.mapboxgl-touch-drag-pan.mapboxgl-touch-zoom-rotate :nth-child(7) {
+  .fire {
     color:green;
-    animation: clignote 2s linear infinite;
+    animation: clignote 1s linear infinite;
   }
 
   @keyframes clignote {
+	0% {
+    opacity: 0;
+	}
+	50% {
+    opacity: 0.5;
 
-    90% { opacity: 0; }
+	}
+	100% {
+    opacity: 1;
+
+	}
   }
