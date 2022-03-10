@@ -200,3 +200,52 @@
   color: white;
   background-color: #839e81;
 }
+
+.card-product.card-show-icons-map {
+  margin-bottom: 50px;
+}
+
+#chart-1 {
+  display: block;
+  box-sizing: border-box;
+  height: 326px;
+  width: 700px;
+}
+
+.card-product.show-container-map {
+  padding: 300px 0px;
+}
+
+.photo-plus-graph {
+  display: flex;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.graph-container-show {
+  border-radius: 4px;
+  width: 88%;
+  background-color: white;
+  padding: 2%;
+  margin-left: 5px;
+}
+
+.filling-rate-container-show {
+  position: absolute;
+  top: 56%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 3em !important;
+  color: white;
+  opacity: 1 !important;
+}
+
+.card-show-icons-map {
+  display: flex;
+  justify-content: space-between;
+  height: 100% !important;
+}
+
+.image-dumpster {
+  position: relative;
+}
