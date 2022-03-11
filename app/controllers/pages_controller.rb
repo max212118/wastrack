@@ -76,7 +76,8 @@ class PagesController < ApplicationController
        lat: container.latitude,
        lng: container.longitude,
        info_window: render_to_string(partial: "info_window", locals: { container: container }),
-       image_url: helpers.asset_url(container.map_icon)
+       image_url: helpers.asset_url(container.map_icon),
+	   fire: container.map_icon == "garbage-fire-2.png"
      }
 
     end

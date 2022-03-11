@@ -29,7 +29,8 @@ export default class extends Controller {
       customMarker.style.backgroundSize = "contain"
       customMarker.style.width = "25px"
       customMarker.style.height = "25px"
-      if (customMarker.style['backgroundImage'] === ('url("http://localhost:3000/assets/garbage-fire-2-77f3cfcf1f8d50ffc6b7cb75918ee0d00b2a9ea52d8026d600fd84d71f7fe967.png")' || 'url("http://www.wastrack.fr/assets/garbage-fire-2-77f3cfcf1f8d50ffc6b7cb75918ee0d00b2a9ea52d8026d600fd84d71f7fe967.png")')) {
+      // console.log(marker.fire)
+      if (marker.fire) {
         customMarker.classList.add("fire");
       }
 
