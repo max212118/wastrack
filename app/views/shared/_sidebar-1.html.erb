@@ -1,11 +1,11 @@
 <div class="d-flex flex-column flex-shrink-0 p-3 text-white sidetracks" style="width: 280px;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-	<svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+	<%# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> %>
 	<% if @city_hall %>
 		<span class="fs-4">Mairie de <%= @city_hall.name %></span>
 	<% else %>
 	<%# A CHANGER AVEC UN @city_hall SUR TOUTE LES PAGES %>
-      <span class="fs-4">Mairie de Megeve</span>
+      <span class="fs-4">Mairie de Megève</span>
 	<% end %>
     </a>
     <hr>
@@ -13,25 +13,25 @@
       <li class="nav-item">
 		<%= link_to root_path, class:"nav-link #{ 'active' if url_for == root_path}" do %>
 		  <i class="fa-solid fa-house"></i>
-          Home
+          Accueil
         <% end %>
       </li>
       <li>
 		<%= link_to dashboard_path, class:"nav-link #{ 'active' if url_for == dashboard_path}" do %>
 		  <i class="fa-solid fa-gauge-high"></i>
-          Dashboard
+          Tableau de bord
         <% end %>
       </li>
       <li>
 		<%= link_to roads_path, class:"nav-link #{ 'active' if url_for == roads_path}" do %>
 		  <i class="fa-solid fa-road"></i>
-          Routes
+          Itinéraires
         <% end %>
       </li>
       <li>
 		<%= link_to trucks_path, class:"nav-link #{ 'active' if url_for == trucks_path}" do %>
 		  <i class="fa-solid fa-truck"></i>
-          Camions
+          Flotte
         <% end %>
       </li>
       <li>

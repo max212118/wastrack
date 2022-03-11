@@ -2,7 +2,7 @@
     <div class="container-stats-economies">
         <div class="container-left-stats">
             <div class="container-mots-explications">
-              <h1>Vos economies,</h1>
+              <h1>Vos economies</h1>
             </div>
             <div class="container-weight-waste-types">
                 <section class="statis mt-4 text-center" id= "economies-inline">
@@ -15,7 +15,7 @@
                                 <%count += 1 if container.waste_type == 'verre'%>
                                 <%end %>
                                 <h3><%= count * 10.5%> T</h3>
-                                <p class="lead">verre en <%=l(Date.today, format: "%B")%></p>
+                                <p class="lead">VERRE</p>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                                 <%count += 1 if container.waste_type == 'papier'%>
                                 <%end %>
                                 <h3><%= count * 10.5%> T</h3>
-                                <p class="lead">papier en <%=l(Date.today, format: "%B")%></p>
+                                <p class="lead">PAPIER</p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                                 <%count += 1 if container.waste_type == 'plastique'%>
                                 <%end %>
                                 <h3><%= count * 10.5%> T</h3>
-                                <p class="lead">plastique en <%=l(Date.today, format: "%B")%></p>
+                                <p class="lead">PLASTIQUE</p>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                                 <%count += 1 if container.waste_type == 'reste'%>
                                 <%end %>
                                 <h3><%= count * 10.5%> T</h3>
-                                <p class="lead">restes en <%=l(Date.today, format: "%B")%></p>
+                                <p class="lead">AUTRES</p>
                             </div>
                         </div>
                     </div>  
@@ -65,7 +65,7 @@
             </div>
             <div class="container-savings-km-carbone">
                 <div class="savings-carbone">
-                    <h5>Trajet quotidien en <mark id="highlight-green">kilometres</mark></h5>
+                    <h5>Trajet quotidien en <mark id="highlight-green">kilomètres</mark></h5>
                     <div><%= area_chart Road.group_by_year(:date).average(:kilometers), defer: true, height: "400px", colors: ["#85C883"]%></div>
                 </div>
                 <div class="savings-km">
@@ -103,7 +103,7 @@
 
             <div class="card-about-savings">
                <p>CO2</p>
-              <div class="savings-in-numbers">
+              <div class="savings-in-numbers" id="co2-economies-card">
                  <h2>3T</h2>
               </div>
             </div>
