@@ -166,8 +166,8 @@ user4.photo.attach(io: file, filename: 'amaury.png', content_type: 'image/jpg')
 file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
 user5.photo.attach(io: file, filename: 'container.png', content_type: 'image/png')
 
-file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
-user6.photo.attach(io: file, filename: 'container.png', content_type: 'image/png')
+file = URI.open('https://yt3.ggpht.com/ytc/AKedOLQMfHpDNkwKhzMD1ORDYlKKVUukOR3MORrMn3D0ug=s176-c-k-c0x00ffffff-no-rj')
+user6.photo.attach(io: file, filename: 'fanf.png', content_type: 'image/png')
 
 file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg')
 user7.photo.attach(io: file, filename: 'container.png', content_type: 'image/png')

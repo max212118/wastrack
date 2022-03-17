@@ -15,8 +15,8 @@ class TruckPolicy < ApplicationPolicy
   end
 
   def update?
-    #user.employee_category == "city employee"
-    return true if user.present?
+    return true if user.employee_category == "city employee"
+    # return true if user.present?
   end
 
   def destroy?
